@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quejas · Reserva de Suba</title>
+  <link rel="icon" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="#inicio">
+        <img src="logo.png" alt="Reserva de Suba" />
+        <span>Portal de quejas</span>
+      </a>
+      <nav class="nav">
+        <a href="#proceso">Proceso</a>
+        <a href="#tipos">Tipos</a>
+        <a href="#formulario">Radicar</a>
+        <a href="#marco">Ley 675</a>
+      </nav>
+      <a class="btn btn-wine" href="#formulario">Presentar queja</a>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Ley 675 de 2001 · Debido proceso</p>
+        <h1>Radique una queja formal</h1>
+        <p class="lead">Elija el tipo, complete el formato y envíe a la administración. Recibe un radicado. Las sanciones no son automáticas.</p>
+        <div class="hero-actions">
+          <a class="btn btn-wine" href="#formulario">Iniciar queja</a>
+          <a class="btn btn-ghost" href="#tipos">Ver formatos</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <p class="kicker">Copropiedad</p>
+        <strong id="brandName">Reserva de Suba</strong>
+        <p>Administración: <span id="infoAdmin">reservadesubabol@outlook.com</span></p>
+        <p id="infoCiudad">Localidad de Suba · Bogotá D.C.</p>
+        <p id="infoNombre" hidden>Reserva de Suba</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="wrap section" id="proceso">
+    <p class="eyebrow">Cómo funciona</p>
+    <h2>De la queja a la posible sanción</h2>
+    <ol class="steps">
+      <li><span>01</span><h3>Usted radica</h3><p>Elige el tipo, completa, describe pruebas y recibe un número QJ-…</p></li>
+      <li><span>02</span><h3>Administración recibe</h3><p>El formato llega al correo de administración.</p></li>
+      <li><span>03</span><h3>Requerimiento</h3><p>Si hay mérito, se requiere por escrito y hay plazo de descargos.</p></li>
+      <li><span>04</span><h3>Decisión</h3><p>Consejo o Asamblea resuelve. El administrador no multa solo.</p></li>
+    </ol>
+  </section>
+
+  <section class="section sand" id="tipos">
+    <div class="wrap">
+      <p class="eyebrow">Formatos</p>
+      <h2>Elija el tipo de queja</h2>
+      <div class="type-grid" id="typeGrid"></div>
+    </div>
+  </section>
+
+  <section class="wrap section" id="formulario">
+    <p class="eyebrow">Radicación</p>
+    <h2>Formulario de queja</h2>
+    <p id="formHint">Seleccione un tipo arriba para cargar el formato.</p>
+
+    <form id="quejaForm" class="form-card" novalidate>
+      <input type="hidden" name="tipo_queja" id="tipoQueja" />
+      <input type="hidden" name="tipo_label" id="tipoLabel" />
+
+      <fieldset>
+        <legend>1. Quien presenta la queja</legend>
+        <div class="grid-2">
+          <label>Nombre completo *<input name="nombre" required /></label>
+          <label>Cédula *<input name="cedula" required inputmode="numeric" /></label>
+          <label>Calidad *
+            <select name="calidad" required>
+              <option value="">Seleccione</option>
+              <option>Propietario</option>
+              <option>Arrendatario</option>
+              <option>Residente autorizado</option>
+            </select>
+          </label>
+          <label>Unidad *<input name="unidad" required placeholder="Torre — Apto" /></label>
+          <label>Teléfono *<input name="telefono" required inputmode="tel" /></label>
+          <label>Correo *<input name="email" type="email" required /></label>
+        </div>
+        <label class="check"><input type="checkbox" name="reserva_identidad" /> Solicito reservar mi identidad frente al presunto infractor.</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Presunto infractor y hechos</legend>
+        <div class="grid-2">
+          <label>Unidad del presunto infractor *<input name="unidad_infractor" required /></label>
+          <label>Nombre (si lo conoce)<input name="nombre_infractor" /></label>
+          <label>Fecha de los hechos *<input name="fecha_hechos" type="date" required /></label>
+          <label>Hora aproximada<input name="hora_hechos" type="time" /></label>
+        </div>
+        <label>¿Es un hecho reiterado?
+          <select name="reiterado">
+            <option value="No / primera vez">No / primera vez</option>
+            <option value="Sí, ya ocurrió antes">Sí, ya ocurrió antes</option>
+            <option value="Es continuo o permanente">Es continuo o permanente</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset id="camposEspecificos">
+        <legend>3. Formato específico</legend>
+        <p class="muted">Seleccione un tipo de queja para ver estos campos.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>4. Relato, pretensión y pruebas</legend>
+        <label>Relato de los hechos *<textarea name="hechos" required rows="6"></textarea></label>
+        <label>Qué solicita *
+          <select name="pretension" required>
+            <option value="">Seleccione</option>
+            <option value="Llamado de atención / requerimiento escrito">Llamado de atención / requerimiento escrito</option>
+            <option value="Remisión al Comité de Convivencia">Remisión al Comité de Convivencia</option>
+            <option value="Inicio de proceso sancionatorio (art. 59 Ley 675)">Inicio de proceso sancionatorio (art. 59 Ley 675)</option>
+            <option value="Inspección / verificación en sitio">Inspección / verificación en sitio</option>
+            <option value="Reparación de daños a cargo del responsable">Reparación de daños</option>
+          </select>
+        </label>
+        <label>Pruebas que aporta<textarea name="pruebas" rows="3"></textarea></label>
+        <label>Cómo entrega las pruebas *
+          <select name="medio_prueba" required>
+            <option value="">Seleccione</option>
+            <option value="Enlace de Google Drive / OneDrive">Enlace de Drive o OneDrive (video)</option>
+            <option value="Fotos livianas por correo">Fotos livianas</option>
+            <option value="WhatsApp a administración citando el radicado">WhatsApp citando el radicado</option>
+            <option value="Solo descripción / minuta de portería">Solo descripción o minuta</option>
+          </select>
+        </label>
+        <label>Enlace de Drive / OneDrive<input name="enlace_pruebas" type="url" placeholder="https://drive.google.com/..." /></label>
+        <label>Testigos<textarea name="testigos" rows="2"></textarea></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>5. Declaración</legend>
+        <label class="check"><input type="checkbox" name="veracidad" required /> Declaro que la información es veraz. Las sanciones no son automáticas.</label>
+        <label class="check"><input type="checkbox" name="habeas" required /> Autorizo el tratamiento de datos para este trámite (Ley 1581 de 2012).</label>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-wine" id="submitBtn">Radicar y generar formato</button>
+        <button type="button" class="btn btn-ghost" id="previewBtn">Vista previa</button>
+        <button type="reset" class="btn btn-text">Limpiar</button>
+      </div>
+      <p class="fine" id="envioNota"></p>
+    </form>
+  </section>
+
+  <section class="section sand" id="marco">
+    <div class="wrap">
+      <p class="eyebrow">Marco legal</p>
+      <h2>Qué puede hacer la administración</h2>
+      <div class="legal-grid">
+        <article class="card"><h3>Art. 59 — sanciones</h3><p>Multas sucesivas (hasta 2 cuotas cada una, 10 en total) y restricción de zonas no esenciales. Nunca el acceso ni el ascensor único.</p></article>
+        <article class="card"><h3>Art. 60 — debido proceso</h3><p>Requerimiento escrito, descargos y decisión motivada. El administrador no impone la multa por sí solo.</p></article>
+        <article class="card"><h3>Otras vías</h3><p>Comité de convivencia, Policía (1801), Alcaldía Local de Suba. Emergencia: 123.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap">
+      <img src="logo.png" alt="" />
+      <p><strong id="footerName">Reserva de Suba</strong> · parque residencial</p>
+      <p class="mini">Portal interno de radicación. No sustituye el reglamento ni la asamblea.</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel">
+      <button class="modal-close" data-close aria-label="Cerrar">×</button>
+      <h2 id="modalTitle">Formato de queja</h2>
+      <p class="aviso-envio" id="avisoEnvio" hidden></p>
+      <div class="doc-toolbar">
+        <button class="btn btn-wine btn-sm" id="printBtn">Imprimir / PDF</button>
+        <button class="btn btn-ghost btn-sm" id="copyBtn">Copiar texto</button>
+        <a class="btn btn-ghost btn-sm" id="mailtoBtn">Enviar por correo</a>
+      </div>
+      <article class="documento" id="documento"></article>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
