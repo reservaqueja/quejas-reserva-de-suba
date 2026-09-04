@@ -5,12 +5,13 @@ window.CONJUNTO_CONFIG = {
   ciudad: "Localidad de Suba · Bogotá D.C.",
   direccion: "POR CONFIRMAR",
   nit: "POR CONFIRMAR",
-  emailAdmin: "reservadesubabol@outlook.com",
+  emailAdmin: "reservadesubaque@outlook.com",
   telefonoAdmin: "POR CONFIRMAR",
   horarioAtencion: "Lunes a viernes, 8:00 a.m. a 5:00 p.m.",
 
-  web3formsAccessKey: "",
+  web3formsAccessKey: "f56f70d8-4530-453b-a46d-7955102a5f0d",
   envioAutomatico: true,
+
   asuntoCorreo: "Radicado de queja — Reserva de Suba",
-  urlPublica: "https://directorio-reserva-de-suba.reservadesubadire.workers.dev"
+  urlPublica: "https://quejas-reserva-de-suba.reservadesubaque.workers.dev"
 };
