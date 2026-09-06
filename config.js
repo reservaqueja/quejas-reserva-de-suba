@@ -8,6 +8,10 @@ window.CONJUNTO_CONFIG = {
   telefonoAdmin: "3194090958",
   horarioAtencion: "Lunes a viernes, 8:00 a.m. a 5:00 p.m.",
 
+  instructivosUrl: "https://drive.google.com/file/d/1QlPXDbUoxC2QC2OMv0yngdZpGsMS1_1W/view?usp=sharing",
+  whatsappPruebas: "573194090958",
+  whatsappMensaje: "Hola, administración Reserva de Suba. Envío pruebas de mi queja. Radicado: ",
+
   web3formsAccessKey: "f56f70d8-4530-453b-a46d-7955102a5f0d",
   envioAutomatico: true,
   asuntoCorreo: "Radicado de queja — Reserva de Suba",
