@@ -78,7 +78,7 @@
       campos: [
         { name: "bien_danado", label: "Bien afectado", type: "text", required: true, placeholder: "Pared del hall, jardín, portón, vehículo…" },
         { name: "origen_dano", label: "Origen aparente", type: "select", options: ["Acción u omisión de un residente", "Filtración / humedad", "Vehículo", "Obra", "Desconocido"] },
-        { name: "urgencia", label: "Urgencia", type: "select", options: ["Baja", "Media", "Alta (seguridad o filtración activa)"] }
+        { name: "urgencia", label: "Urgencia", type: "select", options: ["Baja", "Media", "Alta"] }
       ]
     },
     {
