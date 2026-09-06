@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quejas · Reserva de Suba</title>
+  <title>Portal de quejas · Reserva de Suba</title>
+  <meta name="description" content="Radique una queja formal ante la copropiedad Reserva de Suba, conforme a la Ley 675 de 2001 y el reglamento de propiedad horizontal." />
   <link rel="icon" href="logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,440;0,9..144,560;0,9..144,650;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,72 +16,84 @@
     <div class="wrap top-inner">
       <a class="brand" href="#inicio">
         <img src="logo.png" alt="Reserva de Suba" />
-        <span>Portal de quejas</span>
+        <span class="brand-text">Portal de<br />quejas</span>
       </a>
-      <nav class="nav">
-        <a href="#proceso">Proceso</a>
-        <a href="#tipos">Tipos</a>
-        <a href="#formulario">Radicar</a>
-        <a href="#marco">Ley 675</a>
+      <nav class="tabs" aria-label="Secciones del portal">
+        <a href="#proceso"><em>01</em>Proceso</a>
+        <a href="#tipos"><em>02</em>Tipos</a>
+        <a href="#formulario"><em>03</em>Radicar</a>
+        <a href="#marco"><em>04</em>Ley 675</a>
       </nav>
-      <a class="btn btn-instructivo" id="btnInstructivos" href="#" target="_blank" rel="noopener">Instructivos</a>
+      <a class="btn btn-outline" id="btnInstructivos" href="#" target="_blank" rel="noopener">Instructivos</a>
     </div>
   </header>
 
   <section class="hero" id="inicio">
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow">Ley 675 de 2001 · Debido proceso</p>
-        <h1>Bienvenido al Portal de quejas.</h1>
-        <p class="lead">Este portal solo recibe y radica la queja. No impone sanciones. En Reserva de Suba decide el Consejo de Administración (escritura 176 de 2016, arts. 97–98), con el procedimiento del Manual 2020 y los topes de la Ley 675.</p>
+        <p class="cite">Ley 675 de 2001 — Régimen de propiedad horizontal</p>
+        <h1>Radique su queja con debido proceso.</h1>
+        <p class="lead">Este portal recibe y radica la queja; no impone sanciones. En Reserva de Suba decide el Consejo de Administración (escritura 176 de 2016, arts. 97–98), siguiendo el Manual de convivencia 2020 y los topes de la Ley 675.</p>
         <div class="hero-actions">
-          <a class="btn btn-wine btn-hero" href="#tipos">Iniciar queja / Seleccionar formulario</a>
-          <a class="btn btn-whatsapp" id="btnWhatsapp" href="#" target="_blank" rel="noopener">WhatsApp — pruebas / citar radicado</a>
+          <a class="btn btn-wine btn-lg" href="#tipos">Iniciar queja</a>
+          <a class="btn btn-whatsapp" id="btnWhatsapp" href="#" target="_blank" rel="noopener">WhatsApp — enviar pruebas</a>
         </div>
+        <p class="hero-foot">Tiempo estimado de radicación: 6 a 10 minutos.</p>
       </div>
-      <aside class="hero-card">
-        <p class="kicker">Copropiedad</p>
-        <strong id="brandName">Reserva de Suba</strong>
-        <p>Administración: <span id="infoAdmin">reservadesubaque@outlook.com</span></p>
-        <p>Teléfono: <span id="infoTel">3194090958</span></p>
-        <p id="infoCiudad">Localidad de Suba · Bogotá D.C.</p>
+
+      <aside class="expediente" aria-label="Datos de la copropiedad">
+        <div class="expediente-tab">Copropiedad</div>
+        <strong id="brandName" class="expediente-name">Reserva de Suba</strong>
+        <dl>
+          <div><dt>Administración</dt><dd id="infoAdmin">reservadesubaque@outlook.com</dd></div>
+          <div><dt>Teléfono</dt><dd id="infoTel">3194090958</dd></div>
+          <div><dt>Localidad</dt><dd id="infoCiudad">Localidad de Suba · Bogotá D.C.</dd></div>
+        </dl>
         <p id="infoNombre" hidden>Reserva de Suba</p>
+        <p class="expediente-note">Cada radicación genera un número de expediente único (QJ-AAAAMMDD-####).</p>
       </aside>
     </div>
   </section>
 
   <section class="wrap section" id="proceso">
-    <p class="eyebrow">Cómo funciona</p>
-    <h2>De la queja a una posible sanción</h2>
-    <ol class="steps">
-      <li><span>01</span><h3>Usted radica</h3><p>Queja al correo de administración, con pruebas. Recibe radicado QJ-…. Aún no hay sanción (Manual cap. XIX y art. 133).</p></li>
-      <li><span>02</span><h3>Llamado escrito</h3><p>El administrador verifica, deja constancia en la carpeta de la unidad y, si hay mérito, envía requerimiento escrito con la norma y plazo de 8 días calendario para descargos.</p></li>
-      <li><span>03</span><h3>Comité (art. 96 RPH)</h3><p>Puede mediar o concertar. El Comité <strong>no impone sanciones</strong> (RPH art. 96 §2 y Manual p. 13).</p></li>
-      <li><span>04</span><h3>Consejo decide</h3><p>El Consejo de Administración impone, si hay mérito, con motivación (RPH arts. 97–98). El administrador solo ejecuta (art. 100).</p></li>
-      <li><span>05</span><h3>Recursos</h3><p>Reposición ante el Consejo: 3 días hábiles (resuelve en 8). Impugnación judicial: 1 mes desde la comunicación (RPH art. 101).</p></li>
+    <div class="section-head">
+      <p class="cite">Cómo funciona</p>
+      <h2>De la queja a una posible sanción</h2>
+    </div>
+    <ol class="timeline">
+      <li><span class="tl-n">01</span><div><h3>Usted radica</h3><p>Queja al correo de administración, con pruebas. Recibe un radicado QJ-…. Aún no hay sanción (Manual cap. XIX y art. 133).</p></div></li>
+      <li><span class="tl-n">02</span><div><h3>Llamado escrito</h3><p>El administrador verifica, deja constancia en la carpeta de la unidad y, si hay mérito, envía requerimiento escrito con la norma y plazo de 8 días calendario para descargos.</p></div></li>
+      <li><span class="tl-n">03</span><div><h3>Comité (art. 96 RPH)</h3><p>Puede mediar o concertar. El Comité <strong>no impone sanciones</strong> (RPH art. 96 §2 y Manual p. 13).</p></div></li>
+      <li><span class="tl-n">04</span><div><h3>Consejo decide</h3><p>El Consejo de Administración impone, si hay mérito, con motivación (RPH arts. 97–98). El administrador solo ejecuta (art. 100).</p></div></li>
+      <li><span class="tl-n">05</span><div><h3>Recursos</h3><p>Reposición ante el Consejo: 3 días hábiles (resuelve en 8). Impugnación judicial: 1 mes desde la comunicación (RPH art. 101).</p></div></li>
     </ol>
-    <p class="nota-proceso">Nota: Las solicitudes de inspección en sitio serán programadas por la administración dentro de los siguientes 3 a 5 días hábiles posteriores a la revisión del formulario. Si se trata de una emergencia de convivencia en tiempo real (ruido actual, riñas, etc.), por favor comuníquese de inmediato con la portería o seguridad externa.</p>
+    <p class="nota-proceso">Nota: las solicitudes de inspección en sitio serán programadas por la administración dentro de los 3 a 5 días hábiles siguientes a la revisión del formulario. Si se trata de una emergencia de convivencia en tiempo real (ruido actual, riñas, etc.), comuníquese de inmediato con la portería o con seguridad externa.</p>
   </section>
 
-  <section class="section sand" id="tipos">
+  <section class="section kraft" id="tipos">
     <div class="wrap">
-      <p class="eyebrow">Formatos</p>
-      <h2>Elija el tipo de queja</h2>
+      <div class="section-head">
+        <p class="cite">Formatos disponibles</p>
+        <h2>Elija el tipo de queja</h2>
+        <p class="hint">Cada tipo carga un formato distinto con los campos que exige ese caso.</p>
+      </div>
       <div class="type-grid" id="typeGrid"></div>
     </div>
   </section>
 
   <section class="wrap section" id="formulario">
-    <p class="eyebrow">Radicación</p>
-    <h2>Formulario de queja</h2>
-    <p id="formHint">Seleccione un tipo arriba para cargar el formato.</p>
+    <div class="section-head">
+      <p class="cite">Radicación</p>
+      <h2>Formulario de queja</h2>
+      <p class="hint" id="formHint">Seleccione un tipo arriba para cargar el formato.</p>
+    </div>
 
     <form id="quejaForm" class="form-card" novalidate>
       <input type="hidden" name="tipo_queja" id="tipoQueja" />
       <input type="hidden" name="tipo_label" id="tipoLabel" />
 
       <fieldset>
-        <legend>1. Quien presenta la queja</legend>
+        <legend><span class="leg-n">I.</span> Quien presenta la queja</legend>
         <div class="grid-2">
           <label>Nombre completo *<input name="nombre" required /></label>
           <label>Cédula *<input name="cedula" required inputmode="numeric" /></label>
@@ -101,7 +114,7 @@
       </fieldset>
 
       <fieldset>
-        <legend>2. Presunto infractor y hechos</legend>
+        <legend><span class="leg-n">II.</span> Presunto infractor y hechos</legend>
         <div class="grid-2">
           <label>Unidad del presunto infractor *<input name="unidad_infractor" required /></label>
           <label>Nombre (si lo conoce)<input name="nombre_infractor" /></label>
@@ -118,12 +131,12 @@
       </fieldset>
 
       <fieldset id="camposEspecificos">
-        <legend>3. Formato específico</legend>
+        <legend><span class="leg-n">III.</span> Formato específico</legend>
         <p class="muted">Seleccione un tipo de queja para ver estos campos.</p>
       </fieldset>
 
       <fieldset>
-        <legend>4. Relato, pretensión y pruebas</legend>
+        <legend><span class="leg-n">IV.</span> Relato, pretensión y pruebas</legend>
         <label>Relato de los hechos *<textarea name="hechos" required rows="6"></textarea></label>
         <label>Qué solicita *
           <select name="pretension" required>
@@ -151,60 +164,70 @@
       </fieldset>
 
       <fieldset>
-        <legend>5. Declaración</legend>
+        <legend><span class="leg-n">V.</span> Declaración</legend>
         <label class="check"><input type="checkbox" name="veracidad" required /> Declaro que la información es veraz y de buena fe. Sé que las sanciones no son automáticas, que solo proceden por conductas previstas en la ley o en el reglamento, y que el presunto infractor tiene derecho de defensa, contradicción e impugnación.</label>
         <label class="check"><input type="checkbox" name="habeas" required /> Autorizo a la copropiedad Reserva de Suba a tratar mis datos personales únicamente para radicar, notificar y tramitar esta queja, conforme a la Ley 1581 de 2012. Puedo conocer, actualizar y rectificar mis datos ante la administración.</label>
         <label class="check"><input type="checkbox" name="no_temeraria" required /> Entiendo que una queja temeraria o de mala fe puede generar responsabilidad y no reemplaza la denuncia penal ni el 123 ante una emergencia.</label>
       </fieldset>
 
       <div class="form-actions">
-        <button type="submit" class="btn btn-wine" id="submitBtn">Radicar y generar formato</button>
-        <button type="button" class="btn btn-ghost" id="previewBtn">Vista previa</button>
+        <button type="submit" class="btn btn-wine btn-lg" id="submitBtn">Radicar y generar formato</button>
+        <button type="button" class="btn btn-outline" id="previewBtn">Vista previa</button>
         <button type="reset" class="btn btn-text">Limpiar</button>
       </div>
       <p class="fine" id="envioNota"></p>
     </form>
   </section>
 
-  <section class="section sand" id="marco">
+  <section class="section kraft" id="marco">
     <div class="wrap">
-      <p class="eyebrow">Marco legal · Bogotá</p>
-      <h2>Qué sí puede — y qué no puede — la copropiedad</h2>
+      <div class="section-head">
+        <p class="cite">Marco legal · Bogotá</p>
+        <h2>Qué sí puede — y qué no puede — la copropiedad</h2>
+      </div>
       <div class="legal-grid">
         <article class="card">
-          <h3>RPH arts. 96 y 58 Ley 675 — Comité</h3>
+          <p class="tag">RPH art. 96 · Ley 675 art. 58</p>
+          <h3>El Comité de Convivencia</h3>
           <p>Comité de Convivencia (3 o más, impar, elegido por Asamblea). Recibe conflictos, concilia y puede archivar. <strong>En ningún caso impone sanciones</strong> (escritura 176 de 2016, art. 96 §2; Manual p. 13).</p>
         </article>
         <article class="card">
-          <h3>RPH art. 97 = Ley 675 art. 59</h3>
+          <p class="tag">RPH art. 97 = Ley 675 art. 59</p>
+          <h3>Qué sanciones existen</h3>
           <p>Tras requerimiento escrito: 1) publicar lista de infractores (máx. 1 mes); 2) multas sucesivas (cada una hasta 2 cuotas; sumadas, 10); 3) restringir zonas comunes no esenciales hasta 1 mes en conductas tipo B. <strong>Prohibido</strong> cortar acceso, bienes esenciales o de uso exclusivo.</p>
         </article>
         <article class="card">
-          <h3>RPH arts. 98 y 100 — quién decide</h3>
+          <p class="tag">RPH arts. 98 y 100</p>
+          <h3>Quién decide</h3>
           <p>En Reserva de Suba el <strong>Consejo de Administración</strong> impone la sanción (art. 98). El administrador la <strong>hace efectiva</strong>, no la crea (art. 100). Si el interesado lo pide, debe ser oído antes (art. 99).</p>
         </article>
         <article class="card">
-          <h3>Tipicidad y manual 2020</h3>
-          <p>Solo conductas del RPH art. 99 o del Manual cap. XIX, siempre dentro de los topes de la Ley 675. Si el Manual choca con la escritura o la ley (p. ej. “sanción inmediata” del administrador), priman el RPH y la Ley 675.</p>
+          <p class="tag">Manual de convivencia 2020</p>
+          <h3>Tipicidad</h3>
+          <p>Solo conductas del RPH art. 99 o del Manual cap. XIX, siempre dentro de los topes de la Ley 675. Si el Manual choca con la escritura o la ley (p. ej. "sanción inmediata" del administrador), priman el RPH y la Ley 675.</p>
         </article>
         <article class="card">
           <h3>Otras autoridades en Bogotá</h3>
+          <p class="tag">Ley 1801 · Alcaldía de Suba</p>
           <p>Código Nacional de Seguridad y Convivencia (Ley 1801): Inspección de Policía. Alcaldía Local de Suba. Emergencia o violencia en curso: <strong>123</strong>. Este formulario no sustituye denuncia penal ni medida de protección.</p>
         </article>
         <article class="card">
+          <p class="tag">Ley 1581 de 2012</p>
           <h3>Datos personales</h3>
-          <p>Ley 1581 de 2012. Los datos se usan solo para este trámite. La reserva de identidad ante el presunto infractor no es absoluta si se abre un proceso con derecho de contradicción.</p>
+          <p>Los datos se usan solo para este trámite. La reserva de identidad ante el presunto infractor no es absoluta si se abre un proceso con derecho de contradicción.</p>
         </article>
       </div>
     </div>
   </section>
 
   <footer class="foot">
-    <div class="wrap">
+    <div class="wrap foot-inner">
       <img src="logo.png" alt="" />
-      <p><strong id="footerName">Reserva de Suba</strong> · parque residencial</p>
-      <p class="mini">Portal interno de radicación. Se rige por la Ley 675 de 2001, la escritura 176 del 21 de junio de 2016 (Notaría 32) y el Manual de Convivencia 2020. No es asesoría jurídica. Carrera 145 #150-64 · Suba.</p>
-      <p class="mini copy">Reserva de Suba © 2026 — Todos los derechos reservados.</p>
+      <div>
+        <p><strong id="footerName">Reserva de Suba</strong> · parque residencial</p>
+        <p class="mini">Portal interno de radicación. Se rige por la Ley 675 de 2001, la escritura 176 del 21 de junio de 2016 (Notaría 32) y el Manual de Convivencia 2020. No es asesoría jurídica. Carrera 145 #150-64 · Suba.</p>
+        <p class="mini copy">Reserva de Suba © 2026 — Todos los derechos reservados.</p>
+      </div>
     </div>
   </footer>
 
@@ -216,8 +239,8 @@
       <p class="aviso-envio" id="avisoEnvio" hidden></p>
       <div class="doc-toolbar">
         <button class="btn btn-wine btn-sm" id="printBtn">Imprimir / PDF — Guardar</button>
-        <button class="btn btn-ghost btn-sm" id="copyBtn">Copiar texto</button>
-        <a class="btn btn-ghost btn-sm" id="mailtoBtn">Enviar por correo</a>
+        <button class="btn btn-outline btn-sm" id="copyBtn">Copiar texto</button>
+        <a class="btn btn-outline btn-sm" id="mailtoBtn">Enviar por correo</a>
       </div>
       <article class="documento" id="documento"></article>
     </div>
@@ -227,4 +250,3 @@
   <script src="app.js"></script>
 </body>
 </html>
-
