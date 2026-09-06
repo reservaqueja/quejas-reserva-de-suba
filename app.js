@@ -174,8 +174,9 @@
   }
 
   function renderTypes() {
-    els.typeGrid.innerHTML = TIPOS.map((t) => `
+    els.typeGrid.innerHTML = TIPOS.map((t, i) => `
       <button type="button" class="type-card" data-id="${t.id}">
+        <span class="type-tag">Formato F-${String(i + 1).padStart(2, "0")}</span>
         <span class="type-icon">${t.icon}</span>
         <h3>${t.titulo}</h3>
         <p>${t.desc}</p>
