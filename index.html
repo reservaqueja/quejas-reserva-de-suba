@@ -32,7 +32,7 @@
       <div>
         <p class="eyebrow">Ley 675 de 2001 · Debido proceso</p>
         <h1>Radique una queja formal</h1>
-        <p class="lead">Elija el tipo, complete el formato y envíe a la administración. Recibe un radicado. Las sanciones no son automáticas.</p>
+        <p class="lead">Este portal solo recibe y radica la queja. No impone sanciones. En Reserva de Suba decide el Consejo de Administración (escritura 176 de 2016, arts. 97–98), con el procedimiento del Manual 2020 y los topes de la Ley 675.</p>
         <div class="hero-actions">
           <a class="btn btn-wine" href="#formulario">Iniciar queja</a>
           <a class="btn btn-ghost" href="#tipos">Ver formatos</a>
@@ -41,7 +41,7 @@
       <aside class="hero-card">
         <p class="kicker">Copropiedad</p>
         <strong id="brandName">Reserva de Suba</strong>
-        <p>Administración: <span id="infoAdmin">reservadesubabol@outlook.com</span></p>
+        <p>Administración: <span id="infoAdmin">reservadesubaque@outlook.com</span></p>
         <p id="infoCiudad">Localidad de Suba · Bogotá D.C.</p>
         <p id="infoNombre" hidden>Reserva de Suba</p>
       </aside>
@@ -50,12 +50,13 @@
 
   <section class="wrap section" id="proceso">
     <p class="eyebrow">Cómo funciona</p>
-    <h2>De la queja a la posible sanción</h2>
+    <h2>De la queja a una posible sanción</h2>
     <ol class="steps">
-      <li><span>01</span><h3>Usted radica</h3><p>Elige el tipo, completa, describe pruebas y recibe un número QJ-…</p></li>
-      <li><span>02</span><h3>Administración recibe</h3><p>El formato llega al correo de administración.</p></li>
-      <li><span>03</span><h3>Requerimiento</h3><p>Si hay mérito, se requiere por escrito y hay plazo de descargos.</p></li>
-      <li><span>04</span><h3>Decisión</h3><p>Consejo o Asamblea resuelve. El administrador no multa solo.</p></li>
+      <li><span>01</span><h3>Usted radica</h3><p>Queja al correo de administración, con pruebas. Recibe radicado QJ-…. Aún no hay sanción (Manual cap. XIX y art. 133).</p></li>
+      <li><span>02</span><h3>Llamado escrito</h3><p>El administrador verifica, deja constancia en la carpeta de la unidad y, si hay mérito, envía requerimiento escrito con la norma y plazo de 8 días calendario para descargos.</p></li>
+      <li><span>03</span><h3>Comité (art. 96 RPH)</h3><p>Puede mediar o concertar. El Comité <strong>no impone sanciones</strong> (RPH art. 96 §2 y Manual p. 13).</p></li>
+      <li><span>04</span><h3>Consejo decide</h3><p>El Consejo de Administración impone, si hay mérito, con motivación (RPH arts. 97–98). El administrador solo ejecuta (art. 100).</p></li>
+      <li><span>05</span><h3>Recursos</h3><p>Reposición ante el Consejo: 3 días hábiles (resuelve en 8). Impugnación judicial: 1 mes desde la comunicación (RPH art. 101).</p></li>
     </ol>
   </section>
 
@@ -93,7 +94,7 @@
           <label>Teléfono *<input name="telefono" required inputmode="tel" /></label>
           <label>Correo *<input name="email" type="email" required /></label>
         </div>
-        <label class="check"><input type="checkbox" name="reserva_identidad" /> Solicito reservar mi identidad frente al presunto infractor.</label>
+        <label class="check"><input type="checkbox" name="reserva_identidad" /> Solicito que mi identidad se reserve frente al presunto infractor en esta etapa de radicación. Entiendo que la administración sí la conocerá y que, si se abre proceso sancionatorio, el derecho de contradicción puede exigir identificar al quejoso.</label>
       </fieldset>
 
       <fieldset>
@@ -124,11 +125,12 @@
         <label>Qué solicita *
           <select name="pretension" required>
             <option value="">Seleccione</option>
+            <option value="Poner en conocimiento de la administración">Poner en conocimiento de la administración</option>
             <option value="Llamado de atención / requerimiento escrito">Llamado de atención / requerimiento escrito</option>
-            <option value="Remisión al Comité de Convivencia">Remisión al Comité de Convivencia</option>
-            <option value="Inicio de proceso sancionatorio (art. 59 Ley 675)">Inicio de proceso sancionatorio (art. 59 Ley 675)</option>
+            <option value="Remisión al Comité de Convivencia (art. 58 Ley 675)">Remisión al Comité de Convivencia (art. 58 Ley 675)</option>
+            <option value="Inicio de proceso sancionatorio (arts. 59 y 60 Ley 675)">Inicio de proceso sancionatorio (arts. 59 y 60 Ley 675)</option>
             <option value="Inspección / verificación en sitio">Inspección / verificación en sitio</option>
-            <option value="Reparación de daños a cargo del responsable">Reparación de daños</option>
+            <option value="Reparación de daños a cargo de quien resulte responsable">Reparación de daños a cargo de quien resulte responsable</option>
           </select>
         </label>
         <label>Pruebas que aporta<textarea name="pruebas" rows="3"></textarea></label>
@@ -147,8 +149,9 @@
 
       <fieldset>
         <legend>5. Declaración</legend>
-        <label class="check"><input type="checkbox" name="veracidad" required /> Declaro que la información es veraz. Las sanciones no son automáticas.</label>
-        <label class="check"><input type="checkbox" name="habeas" required /> Autorizo el tratamiento de datos para este trámite (Ley 1581 de 2012).</label>
+        <label class="check"><input type="checkbox" name="veracidad" required /> Declaro que la información es veraz y de buena fe. Sé que las sanciones no son automáticas, que solo proceden por conductas previstas en la ley o en el reglamento, y que el presunto infractor tiene derecho de defensa, contradicción e impugnación.</label>
+        <label class="check"><input type="checkbox" name="habeas" required /> Autorizo a la copropiedad Reserva de Suba a tratar mis datos personales únicamente para radicar, notificar y tramitar esta queja, conforme a la Ley 1581 de 2012. Puedo conocer, actualizar y rectificar mis datos ante la administración.</label>
+        <label class="check"><input type="checkbox" name="no_temeraria" required /> Entiendo que una queja temeraria o de mala fe puede generar responsabilidad y no reemplaza la denuncia penal ni el 123 ante una emergencia.</label>
       </fieldset>
 
       <div class="form-actions">
@@ -162,12 +165,33 @@
 
   <section class="section sand" id="marco">
     <div class="wrap">
-      <p class="eyebrow">Marco legal</p>
-      <h2>Qué puede hacer la administración</h2>
+      <p class="eyebrow">Marco legal · Bogotá</p>
+      <h2>Qué sí puede — y qué no puede — la copropiedad</h2>
       <div class="legal-grid">
-        <article class="card"><h3>Art. 59 — sanciones</h3><p>Multas sucesivas (hasta 2 cuotas cada una, 10 en total) y restricción de zonas no esenciales. Nunca el acceso ni el ascensor único.</p></article>
-        <article class="card"><h3>Art. 60 — debido proceso</h3><p>Requerimiento escrito, descargos y decisión motivada. El administrador no impone la multa por sí solo.</p></article>
-        <article class="card"><h3>Otras vías</h3><p>Comité de convivencia, Policía (1801), Alcaldía Local de Suba. Emergencia: 123.</p></article>
+        <article class="card">
+          <h3>RPH arts. 96 y 58 Ley 675 — Comité</h3>
+          <p>Comité de Convivencia (3 o más, impar, elegido por Asamblea). Recibe conflictos, concilia y puede archivar. <strong>En ningún caso impone sanciones</strong> (escritura 176 de 2016, art. 96 §2; Manual p. 13).</p>
+        </article>
+        <article class="card">
+          <h3>RPH art. 97 = Ley 675 art. 59</h3>
+          <p>Tras requerimiento escrito: 1) publicar lista de infractores (máx. 1 mes); 2) multas sucesivas (cada una hasta 2 cuotas; sumadas, 10); 3) restringir zonas comunes no esenciales hasta 1 mes en conductas tipo B. <strong>Prohibido</strong> cortar acceso, bienes esenciales o de uso exclusivo.</p>
+        </article>
+        <article class="card">
+          <h3>RPH arts. 98 y 100 — quién decide</h3>
+          <p>En Reserva de Suba el <strong>Consejo de Administración</strong> impone la sanción (art. 98). El administrador la <strong>hace efectiva</strong>, no la crea (art. 100). Si el interesado lo pide, debe ser oído antes (art. 99).</p>
+        </article>
+        <article class="card">
+          <h3>Tipicidad y manual 2020</h3>
+          <p>Solo conductas del RPH art. 99 o del Manual cap. XIX, siempre dentro de los topes de la Ley 675. Si el Manual choca con la escritura o la ley (p. ej. “sanción inmediata” del administrador), priman el RPH y la Ley 675.</p>
+        </article>
+        <article class="card">
+          <h3>Otras autoridades en Bogotá</h3>
+          <p>Código Nacional de Seguridad y Convivencia (Ley 1801): Inspección de Policía. Alcaldía Local de Suba. Emergencia o violencia en curso: <strong>123</strong>. Este formulario no sustituye denuncia penal ni medida de protección.</p>
+        </article>
+        <article class="card">
+          <h3>Datos personales</h3>
+          <p>Ley 1581 de 2012. Los datos se usan solo para este trámite. La reserva de identidad ante el presunto infractor no es absoluta si se abre un proceso con derecho de contradicción.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -176,7 +200,7 @@
     <div class="wrap">
       <img src="logo.png" alt="" />
       <p><strong id="footerName">Reserva de Suba</strong> · parque residencial</p>
-      <p class="mini">Portal interno de radicación. No sustituye el reglamento ni la asamblea.</p>
+      <p class="mini">Portal interno de radicación. Se rige por la Ley 675 de 2001, la escritura 176 del 21 de junio de 2016 (Notaría 32) y el Manual de Convivencia 2020. No es asesoría jurídica. Carrera 145 #150-64 · Suba.</p>
     </div>
   </footer>
 
