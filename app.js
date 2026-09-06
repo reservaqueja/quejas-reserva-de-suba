@@ -130,7 +130,6 @@
     avisoEnvio: document.getElementById("avisoEnvio"),
     modal: document.getElementById("modal"),
     documento: document.getElementById("documento"),
-    mailtoBtn: document.getElementById("mailtoBtn"),
     previewBtn: document.getElementById("previewBtn"),
     printBtn: document.getElementById("printBtn"),
     copyBtn: document.getElementById("copyBtn"),
