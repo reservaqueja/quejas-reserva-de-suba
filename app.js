@@ -34,7 +34,7 @@
         { name: "tipo_parqueo", label: "Tipo de infracción", type: "select", required: true, options: ["Ocupa cupo ajeno", "Visitante en parqueadero de residente", "Doble ocupación", "Bloquea vía o rampa", "Zona prohibida / verde / discapacitados", "Lavado no autorizado", "Exceso de velocidad interno", "Otro"] },
         { name: "placa", label: "Placa del vehículo", type: "text", placeholder: "ABC123", required: true },
         { name: "tipo_vehiculo", label: "Tipo de vehículo", type: "select", options: ["Automóvil", "Moto", "Camioneta", "Van", "Bicicleta / patineta", "No identificado"] },
-        { name: "lugar_parqueo", label: "Ubicación", type: "text", placeholder: "Parqueadeo 11, torre…" }
+        { name: "lugar_parqueo", label: "Ubicación", type: "text", placeholder: "Parqueadero 11, torre 3…" }
       ]
     },
     {
@@ -108,8 +108,8 @@
       titulo: "Otra infracción al reglamento",
       desc: "Cualquier conducta prevista en el reglamento o en la Ley 675.",
       campos: [
-        { name: "norma_citada", label: "Norma o artículo que considera vulnerado (si lo conoce)", type: "text", placeholder: "Ej. Art. X del reglamento" },
-        { name: "categoria_libre", label: "Categoría breve", type: "text", placeholder: "Ej. Publicidad en fachada, Airbnb no autorizado…" }
+        { name: "norma_citada", label: "Norma o artículo que considera vulnerado (si lo conoce)", type: "text", placeholder: "Ej. Art. X del reglamento…" },
+        { name: "categoria_libre", label: "Categoría breve", type: "text", placeholder: "Ej. Publicidad en fachada…" }
       ]
     }
   ];
