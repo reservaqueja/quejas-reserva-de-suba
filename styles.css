@@ -24,6 +24,20 @@ body { margin: 0; font-family: Outfit, system-ui, sans-serif; color: var(--ink);
 .btn-ghost { background: #fff; color: var(--wine); border-color: var(--line); }
 .btn-text { background: none; color: var(--mute); }
 .btn-sm { padding: 8px 12px; font-size: 13px; }
+
+.btn-hero { padding: 14px 22px; font-size: 15px; min-height: 48px; }
+.btn-instructivo { background: #c45b6e; color: #fff; }
+.btn-whatsapp { background: #128C7E; color: #fff; }
+.nota-proceso { margin: 18px 0 0; padding: 14px 16px; background: #fff4ce; border: 1px solid #e6d48a; border-radius: 12px; color: var(--ink); font-size: 14px; line-height: 1.45; }
+.aviso-envio.ok { background: #d8f3e0; border: 1px solid #8dcf9e; color: #14532d; font-size: 16px; font-weight: 600; padding: 14px 16px; }
+.firma { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+.firma .linea { border-top: 1px solid #cfc6b4; padding-top: 8px; font-size: 13px; }
+.documento table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; }
+.documento th, .documento td { border: 1px solid #e4d6d9; padding: 6px 8px; text-align: left; vertical-align: top; }
+.documento th { width: 38%; background: #f4eee9; }
+.documento h1 { font-size: 1.35rem; }
+.documento h3 { margin-top: 16px; }
+
 .hero { padding: 36px 0 10px; }
 .hero-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 24px; align-items: center; }
 .eyebrow { letter-spacing: .16em; text-transform: uppercase; font-size: 11px; color: var(--wine-soft); margin: 0 0 8px; }
@@ -75,7 +89,23 @@ input, select, textarea { width: 100%; margin-top: 4px; padding: 10px 12px; bord
   .nav { display: none; }
 }
 @media print {
-  .top, .doc-toolbar, .modal-close, .modal-backdrop { display: none !important; }
-  .modal-panel { width: auto; max-height: none; margin: 0; box-shadow: none; }
+  html, body { background: #fff !important; margin: 0; padding: 0; }
+  body * { visibility: hidden !important; }
+  #modal, #modal #documento, #modal #documento * { visibility: visible !important; }
+  #modal { position: static !important; inset: auto !important; background: none !important; }
+  .modal-backdrop, .modal-close, .doc-toolbar, .aviso-envio, #modalTitle,
+  .top, header, nav, .hero, .section, .foot, footer { display: none !important; visibility: hidden !important; }
+  .modal-panel {
+    position: static !important;
+    width: 100% !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+  }
+  .documento { border: none !important; padding: 0 !important; }
+  .firma { break-inside: avoid; }
 }
-
