@@ -22,7 +22,7 @@
       campos: [
         { name: "infraccion_mascota", label: "Infracción", type: "select", required: true, options: ["No recoger residuos fisiológicos", "Sin correa o bozal cuando aplica", "Agresión o riesgo a personas", "Ladridos persistentes", "Número de animales no autorizado", "Uso de zonas comunes no permitidas", "Otro"] },
         { name: "descripcion_animal", label: "Descripción del animal", type: "text", placeholder: "Especie, raza, color, tamaño" },
-        { name: "lugar_mascota", label: "Lugar exacto", type: "text", placeholder: "Jardín torre 1, ascensor, andén interno…" }
+        { name: "lugar_mascota", label: "Lugar exacto", type: "text", placeholder: "Jardín torre 1, ascensor…" }
       ]
     },
     {
@@ -34,7 +34,7 @@
         { name: "tipo_parqueo", label: "Tipo de infracción", type: "select", required: true, options: ["Ocupa cupo ajeno", "Visitante en parqueadero de residente", "Doble ocupación / cajón adicional", "Bloquea vía o rampa", "Zona prohibida / verde / discapacitados", "Lavado no autorizado", "Exceso de velocidad interno", "Otro"] },
         { name: "placa", label: "Placa del vehículo", type: "text", placeholder: "ABC123", required: true },
         { name: "tipo_vehiculo", label: "Tipo de vehículo", type: "select", options: ["Automóvil", "Moto", "Camioneta", "Van", "Bicicleta / patineta", "No identificado"] },
-        { name: "lugar_parqueo", label: "Ubicación", type: "text", placeholder: "Cajón, torre, zona de descarga" }
+        { name: "lugar_parqueo", label: "Ubicación", type: "text", placeholder: "Parqueadero 01, torre 3, zona prohibida..." }
       ]
     },
     {
@@ -55,7 +55,7 @@
       desc: "Bolsas fuera de horario, escombros, olores o residuos en zonas comunes.",
       campos: [
         { name: "tipo_residuo", label: "Tipo de residuo", type: "select", required: true, options: ["Bolsas de basura fuera de horario", "Escombros de obra", "Muebles o colchones", "Residuos de mascota", "Aceites / químicos", "Otro"] },
-        { name: "lugar_residuo", label: "Lugar", type: "text", placeholder: "Cuarto de basura, torre, andén, parqueadero…" },
+        { name: "lugar_residuo", label: "Lugar", type: "text", placeholder: "Cuarto de basura, torre, anden…" },
         { name: "riesgo_salud", label: "¿Genera riesgo sanitario o de plagas?", type: "select", options: ["Sí", "No", "Posible"] }
       ]
     },
@@ -76,9 +76,9 @@
       titulo: "Daños a bienes comunes o privados",
       desc: "Roturas, humedades, golpes a portería, jardines o vehículos.",
       campos: [
-        { name: "bien_danado", label: "Bien afectado", type: "text", required: true, placeholder: "Pared del hall, jardín, portón, vehículo…" },
+        { name: "bien_danado", label: "Bien afectado", type: "text", required: true, placeholder: "Pared del hall, jardín, vehículo…" },
         { name: "origen_dano", label: "Origen aparente", type: "select", options: ["Acción u omisión de un residente", "Filtración / humedad", "Vehículo", "Obra", "Desconocido"] },
-        { name: "urgencia", label: "Urgencia", type: "select", options: ["Baja", "Media", "Alta (seguridad o filtración activa)"] }
+        { name: "urgencia", label: "Urgencia", type: "select", options: ["Baja", "Media", "Alta"] }
       ]
     },
     {
@@ -99,7 +99,7 @@
       desc: "Puertas abiertas, prestó tarjeta, ingreso irregular de extraños.",
       campos: [
         { name: "tipo_seguridad", label: "Hecho", type: "select", required: true, options: ["Dejó puerta abierta", "Prestó o clonó control / tag", "Ingreso de persona no autorizada", "Hurto o sospecha de hurto", "Otro"] },
-        { name: "lugar_seguridad", label: "Punto de acceso o zona", type: "text", placeholder: "Peatonal, torre…" }
+        { name: "lugar_seguridad", label: "Punto de acceso o zona", type: "text", placeholder: "Vehiculo, torre, apartamento…" }
       ]
     },
     {
@@ -108,8 +108,8 @@
       titulo: "Otra infracción al reglamento",
       desc: "Cualquier conducta prevista en el reglamento o en la Ley 675.",
       campos: [
-        { name: "norma_citada", label: "Norma o artículo que considera vulnerado (si lo conoce)", type: "text", placeholder: "Ej. Art. X del reglamento / manual de convivencia" },
-        { name: "categoria_libre", label: "Categoría breve", type: "text", placeholder: "Ej. Publicidad en fachada, Airbnb no autorizado…" }
+        { name: "norma_citada", label: "Norma o artículo que considera vulnerado (si lo conoce)", type: "text", placeholder: "Ej. Art. X del reglamento...},
+        { name: "categoria_libre", label: "Categoría breve", type: "text", placeholder: "Ej. Publicidad en fachada, Airbnb…" }
       ]
     }
   ];
