@@ -221,7 +221,7 @@
   function buildDocumento(data, num) {
     const ahora = new Date().toLocaleString("es-CO", { dateStyle: "long", timeStyle: "short" });
     return `
-      <h1>FORMATO DE QUEJA Y SOLICITUD DE TRÁMITE SANCIONATORIO</h1>
+      <h1>FORMATO DE QUEJA ANTE LA COPROPIEDAD</h1>
       <p class="sub">${escapeHtml(cfg.nombre || "Conjunto Residencial")}<br>
       ${escapeHtml(cfg.direccion || "")} · ${escapeHtml(cfg.ciudad || "")}<br>
       NIT ${escapeHtml(cfg.nit || "—")} · Radicado <strong>${num}</strong></p>
@@ -232,7 +232,8 @@
       <p>Yo, <strong>${escapeHtml(data.nombre)}</strong>, identificado(a) con cédula No. <strong>${escapeHtml(data.cedula)}</strong>,
       actuando en calidad de <strong>${escapeHtml(data.calidad)}</strong> de la unidad <strong>${escapeHtml(data.unidad)}</strong>,
       presento la siguiente queja para que se dé el trámite previsto en el reglamento de propiedad horizontal
-      y en los artículos 58, 59 y 60 de la Ley 675 de 2001.</p>
+      de Reserva de Suba y en los artículos 2 (numeral 5), 58, 59 y 60 de la Ley 675 de 2001.
+      Este escrito <strong>no constituye sanción</strong> ni abre por sí solo el proceso del artículo 59.</p>
       <h3>I. Identificación</h3>
       <table>
         <tr><th>Radicado</th><td>${num}</td></tr>
@@ -258,12 +259,14 @@
       <h3>VI. Fundamento y petición</h3>
       <p>Solicito a la administración:</p>
       <ol>
-        <li>Radicar esta queja y acusar recibo al correo del presentante.</li>
-        <li>Verificar los hechos y, de hallar mérito, emitir el <strong>requerimiento escrito</strong> al presunto infractor, con plazo para enmendar la conducta y presentar descargos (art. 60, Ley 675 de 2001).</li>
-        <li>Si la pretensión lo indica, remitir el caso al <strong>Comité de Convivencia</strong> o al órgano competente para decidir sanciones del artículo 59 (publicación, multa sucesiva dentro de los topes legales, o restricción de bienes comunes no esenciales).</li>
-        <li>Informar el resultado del trámite al presentante.</li>
+        <li>Radicar esta queja, dejar constancia en la carpeta de la unidad y acusar recibo al correo del presentante (Manual de Convivencia 2020, cap. XIX y art. 133).</li>
+        <li>Verificar los hechos. Si no hay mérito, archivar de manera motivada e informar.</li>
+        <li>Valorar la vía del Comité de Convivencia (RPH art. 96 y Ley 675 art. 58). El Comité no impone sanciones (RPH art. 96 §2).</li>
+        <li>Si la pretensión es sancionatoria y hay mérito: <strong>requerimiento escrito del administrador</strong> con hechos, capítulo o artículo del Manual/RPH y <strong>ocho (8) días calendario</strong> para descargos y pruebas (Manual art. 133 num. 3; RPH arts. 97 y 99).</li>
+        <li>Remitir al <strong>Consejo de Administración</strong>, único órgano que impone la sanción en esta copropiedad (RPH art. 98; Manual, nota 1). El administrador solo ejecuta lo ya decidido (RPH art. 100).</li>
+        <li>Informar el resultado. El presunto infractor puede pedir ser oído (RPH art. 99), interponer <strong>reposición en 3 días hábiles</strong> (el Consejo resuelve en 8) e <strong>impugnar judicialmente dentro del mes</strong> siguiente a la comunicación (RPH art. 101).</li>
       </ol>
-      <p>Declaro que los hechos se narran de buena fe. Soy consciente de que las sanciones no son automáticas y que el presunto infractor tiene derecho de defensa.</p>
+      <p>Declaro que los hechos se narran de buena fe. Las sanciones no son automáticas. Solo proceden por conductas del RPH art. 99 o del Manual cap. XIX, dentro de los topes de la Ley 675 (máx. 2 cuotas cada multa y 10 en total). Queda prohibido restringir bienes comunes esenciales, el acceso o bienes de uso exclusivo.</p>
       <div class="firma">
         <div>
           <div class="linea">Firma del presentante<br>${escapeHtml(data.nombre)}<br>C.C. ${escapeHtml(data.cedula)}</div>
