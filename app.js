@@ -31,7 +31,7 @@
       titulo: "Parqueadero y movilidad",
       desc: "Ocupación indebida, bloqueo, visitantes en cupo de residente.",
       campos: [
-        { name: "tipo_parqueo", label: "Tipo de infracción", type: "select", required: true, options: ["Ocupa cupo ajeno", "Visitante en parqueadero de residente", "Doble ocupación", "Bloquea vía o rampa", "Zona prohibida / verde / discapacitados", "Lavado no autorizado", "Exceso de velocidad interno", "Otro"] },
+        { name: "tipo_parqueo", label: "Tipo de infracción", type: "select", required: true, options: ["Ocupa cupo ajeno", "Visitante en parqueadero de residente", "Doble ocupación", "Bloquea vía o rampa", "Zona prohibida / Ambulancia", "Lavado no autorizado", "Exceso de velocidad interno", "Otro"] },
         { name: "placa", label: "Placa del vehículo", type: "text", placeholder: "ABC123", required: true },
         { name: "tipo_vehiculo", label: "Tipo de vehículo", type: "select", options: ["Automóvil", "Moto", "Camioneta", "Van", "Bicicleta / patineta", "No identificado"] },
         { name: "lugar_parqueo", label: "Ubicación", type: "text", placeholder: "Parqueadero 11, torre 3…" }
@@ -76,7 +76,7 @@
       titulo: "Daños a bienes comunes o privados",
       desc: "Roturas, humedades, golpes a portería, jardines o vehículos.",
       campos: [
-        { name: "bien_danado", label: "Bien afectado", type: "text", required: true, placeholder: "Pared del hall, jardín, portón, vehículo…" },
+        { name: "bien_danado", label: "Bien afectado", type: "text", required: true, placeholder: "Pared del hall, jardín, vehículo…" },
         { name: "origen_dano", label: "Origen aparente", type: "select", options: ["Acción u omisión de un residente", "Filtración / humedad", "Vehículo", "Obra", "Desconocido"] },
         { name: "urgencia", label: "Urgencia", type: "select", options: ["Baja", "Media", "Alta"] }
       ]
