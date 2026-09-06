@@ -258,7 +258,7 @@
       </table>
       <h3>II. Campos del formato específico</h3>
       ${especificosHTML(data)}
-      <h3>III. Hechos</h3>
+            <h3>III. Hechos</h3>
       <p>${escapeHtml(data.hechos || "").replace(/\n/g, "<br>")}</p>
       <h3>IV. Pretensión</h3>
       <p>${escapeHtml(data.pretension || "—")}</p>
@@ -375,8 +375,6 @@
 
   function openModal(html, data, num) {
     els.documento.innerHTML = html;
-    const subject = encodeURIComponent(`${cfg.asuntoCorreo || "Queja"} ${num} — ${data.tipo_label || ""}`);
-    const body = encodeURIComponent(textoPlano(data, num).slice(0, 1800));
     els.modal.hidden = false;
     els.modal.dataset.num = num;
     const wa = document.getElementById("btnWhatsapp");
