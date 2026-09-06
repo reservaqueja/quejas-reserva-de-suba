@@ -377,7 +377,6 @@
     els.documento.innerHTML = html;
     const subject = encodeURIComponent(`${cfg.asuntoCorreo || "Queja"} ${num} — ${data.tipo_label || ""}`);
     const body = encodeURIComponent(textoPlano(data, num).slice(0, 1800));
-    els.mailtoBtn.href = `mailto:${cfg.emailAdmin || ""}?subject=${subject}&body=${body}`;
     els.modal.hidden = false;
     els.modal.dataset.num = num;
     const wa = document.getElementById("btnWhatsapp");
