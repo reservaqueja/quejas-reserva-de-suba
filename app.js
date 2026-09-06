@@ -33,8 +33,8 @@
       campos: [
         { name: "tipo_parqueo", label: "Tipo de infracción", type: "select", required: true, options: ["Ocupa cupo ajeno", "Visitante en parqueadero de residente", "Doble ocupación / cajón adicional", "Bloquea vía o rampa", "Zona prohibida / verde / discapacitados", "Lavado no autorizado", "Exceso de velocidad interno", "Otro"] },
         { name: "placa", label: "Placa del vehículo", type: "text", placeholder: "ABC123", required: true },
-        { name: "tipo_vehiculo", label: "Tipo de vehículo", type: "select", options: ["Automóvil", "Moto", "Camioneta", "Bicicleta / patineta", "No identificado"] },
-        { name: "lugar_parqueo", label: "Ubicación", type: "text", placeholder: "Sótano 2, cajón 45 / zona de descarga" }
+        { name: "tipo_vehiculo", label: "Tipo de vehículo", type: "select", options: ["Automóvil", "Moto", "Camioneta", "Van", "Bicicleta / patineta", "No identificado"] },
+        { name: "lugar_parqueo", label: "Ubicación", type: "text", placeholder: "Cajón, torre, zona de descarga" }
       ]
     },
     {
@@ -43,7 +43,7 @@
       titulo: "Zonas comunes",
       desc: "Mal uso de piscina, salón, BBQ, gimnasio, juegos o pasillos.",
       campos: [
-        { name: "zona", label: "Zona común", type: "select", required: true, options: ["Piscina", "Salón social", "BBQ / zona de parrillas", "Gimnasio", "Juegos infantiles", "Cancha / zona deportiva", "Pasillos / hall / ascensor", "Terraza / rooftop", "Otra"] },
+        { name: "zona", label: "Zona común", type: "select", required: true, options: ["Piscina", "Salón social", "BBQ / zona de parrillas", "Gimnasio", "Juegos infantiles", "Cancha / zona deportiva", "Pasillos / hall / ascensor", "Otra"] },
         { name: "uso_indebido", label: "Uso indebido", type: "select", options: ["Sin reserva", "Fuera de horario", "Exceso de aforo o invitados", "Consumo no permitido", "Dejó sucio / daños", "Uso comercial no autorizado", "Otro"] },
         { name: "reserva", label: "¿Había reserva o autorización?", type: "select", options: ["No", "Sí", "No aplica / no sé"] }
       ]
@@ -55,7 +55,7 @@
       desc: "Bolsas fuera de horario, escombros, olores o residuos en zonas comunes.",
       campos: [
         { name: "tipo_residuo", label: "Tipo de residuo", type: "select", required: true, options: ["Bolsas de basura fuera de horario", "Escombros de obra", "Muebles o colchones", "Residuos de mascota", "Aceites / químicos", "Otro"] },
-        { name: "lugar_residuo", label: "Lugar", type: "text", placeholder: "Cuarto de basuras torre 2, andén, parqueadero" },
+        { name: "lugar_residuo", label: "Lugar", type: "text", placeholder: "Cuarto de basura, torre, andén, parqueadero…" },
         { name: "riesgo_salud", label: "¿Genera riesgo sanitario o de plagas?", type: "select", options: ["Sí", "No", "Posible"] }
       ]
     },
@@ -98,8 +98,8 @@
       titulo: "Seguridad y acceso",
       desc: "Puertas abiertas, prestó tarjeta, ingreso irregular de extraños.",
       campos: [
-        { name: "tipo_seguridad", label: "Hecho", type: "select", required: true, options: ["Dejó puerta o garaje abierto", "Prestó o clonó control / tag", "Ingreso de persona no autorizada", "Hurto o sospecha de hurto", "Cámara o citófono dañado (reportar)", "Otro"] },
-        { name: "lugar_seguridad", label: "Punto de acceso o zona", type: "text", placeholder: "Peatonal torre 4, garaje sótano 1" }
+        { name: "tipo_seguridad", label: "Hecho", type: "select", required: true, options: ["Dejó puerta abierta", "Prestó o clonó control / tag", "Ingreso de persona no autorizada", "Hurto o sospecha de hurto", "Otro"] },
+        { name: "lugar_seguridad", label: "Punto de acceso o zona", type: "text", placeholder: "Peatonal, torre…" }
       ]
     },
     {
@@ -142,12 +142,23 @@
     els.brandName.textContent = n;
     els.infoNombre.textContent = n;
     els.infoAdmin.textContent = cfg.emailAdmin || "—";
+    const telEl = document.getElementById("infoTel");
+    if (telEl) telEl.textContent = cfg.telefonoAdmin || "—";
     els.infoCiudad.textContent = cfg.ciudad || "Colombia";
     els.footerName.textContent = n;
-    if (cfg.web3formsAccessKey && cfg.envioAutomatico !== false) {
-      els.envioNota.textContent = "Al radicar, el formato se enviará al correo de la administración. Si el cupo mensual automático se acaba, use Enviar por correo: el formulario es el mismo.";
-    } else {
-      els.envioNota.textContent = "El envío automático está pausado o sin clave. Radique igual y pulse Enviar por correo. El formulario no cambia.";
+
+    const inst = document.getElementById("btnInstructivos");
+    if (inst) inst.href = cfg.instructivosUrl || "#";
+
+    const wa = document.getElementById("btnWhatsapp");
+    if (wa) {
+      const num = String(cfg.whatsappPruebas || "").replace(/\D/g, "");
+      const msg = encodeURIComponent(cfg.whatsappMensaje || "Hola, envío pruebas de mi queja. Radicado: ");
+      wa.href = num ? ("https://wa.me/" + num + "?text=" + msg) : "#";
+    }
+
+    if (els.envioNota) {
+      els.envioNota.textContent = "Nota: Al radicar, el formato se enviará al correo de la administración. SOLO si el cupo mensual automático se acaba, use Enviar por correo: el formulario que se envía es el mismo.";
     }
   }
 
@@ -280,9 +291,74 @@
   }
 
   function textoPlano(data, num) {
-    const div = document.createElement("div");
-    div.innerHTML = buildDocumento(data, num);
-    return div.innerText.replace(/\n{3,}/g, "\n\n");
+    const tipo = TIPOS.find((x) => x.id === data.tipo_queja);
+    const extras = tipo
+      ? tipo.campos.map((c) => "  - " + c.label + ": " + (data[c.name] || "—")).join("\n")
+      : "  —";
+    const ahora = new Date().toLocaleString("es-CO", { dateStyle: "long", timeStyle: "short" });
+    return [
+      "FORMATO DE QUEJA ANTE LA COPROPIEDAD",
+      cfg.nombre || "Reserva de Suba",
+      (cfg.direccion || "") + " · " + (cfg.ciudad || ""),
+      "NIT " + (cfg.nit || "—"),
+      "",
+      "Radicado: " + num,
+      "Fecha de radicación: " + ahora,
+      "",
+      "Señores",
+      "Administración / Consejo de Administración",
+      cfg.nombre || "Reserva de Suba",
+      "",
+      "Asunto: Queja formal — " + (data.tipo_label || data.tipo_queja || "General") + " — " + (data.pretension || "gestión administrativa") + ".",
+      "",
+      "Yo, " + (data.nombre || "") + ", identificado(a) con cédula No. " + (data.cedula || "") + ",",
+      "actuando en calidad de " + (data.calidad || "") + " de la unidad " + (data.unidad || "") + ",",
+      "presento la siguiente queja para que se dé el trámite previsto en el reglamento de propiedad horizontal",
+      "de Reserva de Suba y en los artículos 2 (numeral 5), 58, 59 y 60 de la Ley 675 de 2001,",
+      "así como en los artículos 96 a 101 de la escritura 176 de 2016 y el Manual de Convivencia 2020.",
+      "Este escrito no constituye sanción ni abre por sí solo el proceso del artículo 59.",
+      "",
+      "I. IDENTIFICACIÓN",
+      "  Radicado: " + num,
+      "  Tipo de queja / formato: " + (data.tipo_label || "—"),
+      "  Presentante: " + (data.nombre || "") + " · " + (data.calidad || "") + " · " + (data.unidad || ""),
+      "  Contacto: " + (data.telefono || "") + " · " + (data.email || ""),
+      "  Reserva de identidad ante el vecino reportado: " + (data.reserva_identidad ? "Sí, solicitada (Art. 29 C.P.)" : "No"),
+      "  Presunto infractor: " + (data.nombre_infractor || "No identificado") + " · Unidad " + (data.unidad_infractor || "—"),
+      "  Fecha y hora de los hechos: " + (data.fecha_hechos || "—") + " " + (data.hora_hechos || ""),
+      "  Reiteración: " + (data.reiterado || "—"),
+      "",
+      "II. CAMPOS DEL FORMATO ESPECÍFICO",
+      extras,
+      "",
+      "III. HECHOS",
+      data.hechos || "—",
+      "",
+      "IV. PRETENSIÓN",
+      data.pretension || "—",
+      "",
+      "V. PRUEBAS Y TESTIGOS",
+      "  Pruebas descritas: " + (data.pruebas || "No se describieron."),
+      "  Cómo se entregan las pruebas: " + (data.medio_prueba || "—"),
+      "  Enlace audiovisual: " + (data.enlace_pruebas || "No se aportó enlace. Si hay video, se enviará por Drive o WhatsApp citando este radicado."),
+      "  Testigos: " + (data.testigos || "No se indicaron."),
+      "",
+      "VI. FUNDAMENTO Y PETICIÓN",
+      "Solicito a la administración:",
+      "  1. Radicar esta queja, dejar constancia en la carpeta de la unidad y acusar recibo al correo del presentante (Manual 2020, cap. XIX y art. 133).",
+      "  2. Verificar los hechos. Si no hay mérito, archivar de manera motivada e informar.",
+      "  3. Valorar la vía del Comité de Convivencia (RPH art. 96 y Ley 675 art. 58). El Comité no impone sanciones (RPH art. 96 parágrafo 2).",
+      "  4. Si la pretensión es sancionatoria y hay mérito: requerimiento escrito del administrador con hechos, norma y ocho (8) días calendario para descargos (Manual art. 133; RPH arts. 97 y 99).",
+      "  5. Remitir al Consejo de Administración, único órgano que impone la sanción en esta copropiedad (RPH art. 98). El administrador solo ejecuta (RPH art. 100).",
+      "  6. Informar el resultado. El presunto infractor puede pedir ser oído (RPH art. 99), interponer reposición en 3 días hábiles (el Consejo resuelve en 8) e impugnar judicialmente dentro del mes siguiente (RPH art. 101).",
+      "",
+      "Declaro que los hechos se narran de buena fe. Las sanciones no son automáticas. Solo proceden por conductas del RPH art. 99 o del Manual cap. XIX, dentro de los topes de la Ley 675 (máximo 2 cuotas cada multa y 10 en total). Queda prohibido restringir bienes comunes esenciales, el acceso o bienes de uso exclusivo.",
+      "",
+      "Firma del presentante: " + (data.nombre || "") + "  C.C. " + (data.cedula || ""),
+      "Espacio de recibido — Administración: fecha, hora y sello.",
+      "",
+      "Documento generado por el portal de quejas. Destinatario: " + (cfg.emailAdmin || "") + "."
+    ].join("\n");
   }
 
   function mostrarAviso(ok, num) {
@@ -290,7 +366,7 @@
     els.avisoEnvio.hidden = false;
     if (ok) {
       els.avisoEnvio.className = "aviso-envio ok";
-      els.avisoEnvio.textContent = "Radicado " + num + ". Copia enviada sola al Hotmail de administración.";
+      els.avisoEnvio.innerHTML = "<strong>Envío exitoso.</strong> Radicado " + num + ". Muy pronto le notificaremos que hemos recibido su solicitud.";
     } else {
       els.avisoEnvio.className = "aviso-envio warn";
       els.avisoEnvio.textContent = "Radicado " + num + " listo. El envío automático no está disponible (cupo de Forms, falla de red o está pausado). Pulse Enviar por correo: es el mismo formato, solo cambia cómo le llega a administración.";
@@ -304,6 +380,12 @@
     els.mailtoBtn.href = `mailto:${cfg.emailAdmin || ""}?subject=${subject}&body=${body}`;
     els.modal.hidden = false;
     els.modal.dataset.num = num;
+    const wa = document.getElementById("btnWhatsapp");
+    if (wa) {
+      const n = String(cfg.whatsappPruebas || "").replace(/\D/g, "");
+      const msg = encodeURIComponent((cfg.whatsappMensaje || "Hola, envío pruebas de mi queja. Radicado: ") + num);
+      if (n) wa.href = "https://wa.me/" + n + "?text=" + msg;
+    }
   }
 
   function closeModal() {
@@ -314,16 +396,10 @@
     if (!cfg.web3formsAccessKey || cfg.envioAutomatico === false) return { sent: false, reason: "pausado" };
     const payload = {
       access_key: cfg.web3formsAccessKey,
-      subject: `${cfg.asuntoCorreo || "Queja"} ${num} — ${data.tipo_label || ""}`,
-      from_name: data.nombre,
+      subject: (cfg.asuntoCorreo || "Radicado de queja — Reserva de Suba") + " " + num + " — " + (data.tipo_label || ""),
+      from_name: "Portal de quejas Reserva de Suba",
       email: data.email,
-      to: cfg.emailAdmin,
-      radicado: num,
-      conjunto: cfg.nombre,
-      tipo: data.tipo_label,
-      unidad: data.unidad,
-      infractor: data.unidad_infractor,
-      pretension: data.pretension,
+      replyto: data.email,
       message: textoPlano(data, num)
     };
     const res = await fetch("https://api.web3forms.com/submit", {
