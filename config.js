@@ -1,17 +1,15 @@
-/* Reserva de Suba — portal de quejas
-   Edite aquí teléfonos, correo y la clave de Web3Forms. */
+/* Reserva de Suba — portal de quejas */
 window.CONJUNTO_CONFIG = {
   nombre: "Reserva de Suba",
   ciudad: "Localidad de Suba · Bogotá D.C.",
-  direccion: "POR CONFIRMAR",
+  direccion: "Carrera 145 #150-64 · Localidad de Suba",
   nit: "POR CONFIRMAR",
   emailAdmin: "reservadesubaque@outlook.com",
-  telefonoAdmin: "POR CONFIRMAR",
+  telefonoAdmin: "3194090958",
   horarioAtencion: "Lunes a viernes, 8:00 a.m. a 5:00 p.m.",
 
   web3formsAccessKey: "f56f70d8-4530-453b-a46d-7955102a5f0d",
   envioAutomatico: true,
-
   asuntoCorreo: "Radicado de queja — Reserva de Suba",
   urlPublica: "https://quejas-reserva-de-suba.reservadesubaque.workers.dev"
 };
