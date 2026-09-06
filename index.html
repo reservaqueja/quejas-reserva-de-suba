@@ -23,7 +23,7 @@
         <a href="#formulario">Radicar</a>
         <a href="#marco">Ley 675</a>
       </nav>
-      <a class="btn btn-wine" href="#formulario">Presentar queja</a>
+      <a class="btn btn-instructivo" id="btnInstructivos" href="#" target="_blank" rel="noopener">Instructivos</a>
     </div>
   </header>
 
@@ -31,17 +31,18 @@
     <div class="wrap hero-grid">
       <div>
         <p class="eyebrow">Ley 675 de 2001 · Debido proceso</p>
-        <h1>Radique una queja formal</h1>
+        <h1>Bienvenido al Portal de quejas.</h1>
         <p class="lead">Este portal solo recibe y radica la queja. No impone sanciones. En Reserva de Suba decide el Consejo de Administración (escritura 176 de 2016, arts. 97–98), con el procedimiento del Manual 2020 y los topes de la Ley 675.</p>
         <div class="hero-actions">
-          <a class="btn btn-wine" href="#formulario">Iniciar queja</a>
-          <a class="btn btn-ghost" href="#tipos">Ver formatos</a>
+          <a class="btn btn-wine btn-hero" href="#tipos">Iniciar queja / Seleccionar formulario</a>
+          <a class="btn btn-whatsapp" id="btnWhatsapp" href="#" target="_blank" rel="noopener">WhatsApp — pruebas / citar radicado</a>
         </div>
       </div>
       <aside class="hero-card">
         <p class="kicker">Copropiedad</p>
         <strong id="brandName">Reserva de Suba</strong>
         <p>Administración: <span id="infoAdmin">reservadesubaque@outlook.com</span></p>
+        <p>Teléfono: <span id="infoTel">3194090958</span></p>
         <p id="infoCiudad">Localidad de Suba · Bogotá D.C.</p>
         <p id="infoNombre" hidden>Reserva de Suba</p>
       </aside>
@@ -58,6 +59,7 @@
       <li><span>04</span><h3>Consejo decide</h3><p>El Consejo de Administración impone, si hay mérito, con motivación (RPH arts. 97–98). El administrador solo ejecuta (art. 100).</p></li>
       <li><span>05</span><h3>Recursos</h3><p>Reposición ante el Consejo: 3 días hábiles (resuelve en 8). Impugnación judicial: 1 mes desde la comunicación (RPH art. 101).</p></li>
     </ol>
+    <p class="nota-proceso">Nota: Las solicitudes de inspección en sitio serán programadas por la administración dentro de los siguientes 3 a 5 días hábiles posteriores a la revisión del formulario. Si se trata de una emergencia de convivencia en tiempo real (ruido actual, riñas, etc.), por favor comuníquese de inmediato con la portería o seguridad externa.</p>
   </section>
 
   <section class="section sand" id="tipos">
@@ -88,13 +90,14 @@
               <option>Propietario</option>
               <option>Arrendatario</option>
               <option>Residente autorizado</option>
+              <option>Personal de seguridad (No olvide también diligenciar minuta) / Administración</option>
             </select>
           </label>
           <label>Unidad *<input name="unidad" required placeholder="Torre — Apto" /></label>
           <label>Teléfono *<input name="telefono" required inputmode="tel" /></label>
           <label>Correo *<input name="email" type="email" required /></label>
         </div>
-        <label class="check"><input type="checkbox" name="reserva_identidad" /> Solicito que mi identidad se reserve frente al presunto infractor en esta etapa de radicación. Entiendo que la administración sí la conocerá y que, si se abre proceso sancionatorio, el derecho de contradicción puede exigir identificar al quejoso.</label>
+        <label class="check"><input type="checkbox" name="reserva_identidad" /> Solicito que la administración reserve mi identidad frente al vecino reportado. Entiendo que si aporto pruebas físicas (fotos, videos o minuta), el proceso se sustentará en ellas protegiendo mi anonimato. Mi nombre solo se revelaría en caso extremo de que no existan pruebas materiales y mi testimonio directo sea la única vía legal para sostener una sanción (Art. 29 Constitución Política).</label>
       </fieldset>
 
       <fieldset>
@@ -138,7 +141,7 @@
           <select name="medio_prueba" required>
             <option value="">Seleccione</option>
             <option value="Enlace de Google Drive / OneDrive">Enlace de Drive o OneDrive (video)</option>
-            <option value="Fotos livianas por correo">Fotos livianas</option>
+            <option value="Fotos livianas enviadas al correo, citando el radicado">Fotos livianas enviadas al correo, citando el radicado</option>
             <option value="WhatsApp a administración citando el radicado">WhatsApp citando el radicado</option>
             <option value="Solo descripción / minuta de portería">Solo descripción o minuta</option>
           </select>
@@ -201,6 +204,7 @@
       <img src="logo.png" alt="" />
       <p><strong id="footerName">Reserva de Suba</strong> · parque residencial</p>
       <p class="mini">Portal interno de radicación. Se rige por la Ley 675 de 2001, la escritura 176 del 21 de junio de 2016 (Notaría 32) y el Manual de Convivencia 2020. No es asesoría jurídica. Carrera 145 #150-64 · Suba.</p>
+      <p class="mini copy">Reserva de Suba © 2026 — Todos los derechos reservados.</p>
     </div>
   </footer>
 
@@ -211,7 +215,7 @@
       <h2 id="modalTitle">Formato de queja</h2>
       <p class="aviso-envio" id="avisoEnvio" hidden></p>
       <div class="doc-toolbar">
-        <button class="btn btn-wine btn-sm" id="printBtn">Imprimir / PDF</button>
+        <button class="btn btn-wine btn-sm" id="printBtn">Imprimir / PDF — Guardar</button>
         <button class="btn btn-ghost btn-sm" id="copyBtn">Copiar texto</button>
         <a class="btn btn-ghost btn-sm" id="mailtoBtn">Enviar por correo</a>
       </div>
@@ -223,3 +227,4 @@
   <script src="app.js"></script>
 </body>
 </html>
+
