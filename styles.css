@@ -37,7 +37,7 @@ h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: .95; }
 .hero-card p { margin: 6px 0; color: #e8cfd6; font-size: 14px; }
 .section { padding: 36px 0; }
 .sand { background: var(--sand); }
-.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; list-style: none; padding: 0; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; list-style: none; padding: 0; }
 .steps li { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
 .steps span { color: var(--wine-soft); font-weight: 600; font-size: 12px; }
 .type-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
@@ -55,7 +55,7 @@ input, select, textarea { width: 100%; margin-top: 4px; padding: 10px 12px; bord
 .check input { width: auto; margin-top: 4px; }
 .form-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 .fine, .muted, .hint { color: var(--mute); font-size: 13px; }
-.legal-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.legal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
 .card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
 .foot { padding: 28px 0 40px; text-align: center; color: var(--mute); }
 .foot img { height: 44px; }
@@ -78,3 +78,4 @@ input, select, textarea { width: 100%; margin-top: 4px; padding: 10px 12px; bord
   .top, .doc-toolbar, .modal-close, .modal-backdrop { display: none !important; }
   .modal-panel { width: auto; max-height: none; margin: 0; box-shadow: none; }
 }
+
