@@ -366,7 +366,7 @@
     els.avisoEnvio.hidden = false;
     if (ok) {
       els.avisoEnvio.className = "aviso-envio ok";
-      els.avisoEnvio.innerHTML = "<strong>Envío exitoso.</strong> Radicado " + num + ". Muy pronto le notificaremos que hemos recibido su solicitud.";
+      els.avisoEnvio.innerHTML = "<strong>Envío exitoso.</strong> Radicado " + num + ". Muy pronto le notificaremos que hemos recibido su solicitud.GUARDE el numero de RADICADO.";
     } else {
       els.avisoEnvio.className = "aviso-envio warn";
       els.avisoEnvio.textContent = "Radicado " + num + " listo. El envío automático no está disponible (cupo de Forms, falla de red o está pausado). Pulse Enviar por correo: es el mismo formato, solo cambia cómo le llega a administración.";
