@@ -392,7 +392,9 @@
     const wa = document.getElementById("btnWhatsapp");
     if (wa) {
       const n = String(cfg.whatsappPruebas || "").replace(/\D/g, "");
-      const msg = encodeURIComponent((cfg.whatsappMensaje || "Hola, envío pruebas de mi queja. Radicado: ") + num);
+      const baseMensaje = cfg.whatsappMensaje || "Hola, administración Reserva de Suba. Envío pruebas de mi queja. Radicado: ";
+      const mensajeConRadicado = baseMensaje.replace(/(Radicado:\s*)/i, "$1" + num + " ");
+      const msg = encodeURIComponent(mensajeConRadicado);
       if (n) wa.href = "https://wa.me/" + n + "?text=" + msg;
     }
   }
