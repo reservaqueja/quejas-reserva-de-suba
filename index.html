@@ -11,249 +11,946 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,440;0,9..144,560;0,9..144,650;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+
   <header class="top">
     <div class="wrap top-inner">
+
       <a class="brand" href="#inicio">
         <img src="logo.png" alt="Reserva de Suba" />
         <span class="brand-text">Portal de<br />quejas</span>
       </a>
+
       <nav class="tabs" aria-label="Secciones del portal">
         <a href="#proceso">Proceso</a>
         <a href="#tipos">Tipos</a>
         <a href="#formulario">Radicar</a>
         <a href="#marco">Ley 675</a>
       </nav>
-      <a class="btn btn-instructivos" id="btnInstructivos" href="#" target="_blank" rel="noopener">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M6 3.5h9l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-16a1 1 0 0 1 1-1Z" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/>
-          <path d="M14.5 3.5V7a1 1 0 0 0 1 1H19" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/>
-          <path d="M8.3 12.2h7.4M8.3 15.3h7.4M8.3 18.4h4.6" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/>
+
+      <a class="btn btn-instructivos"
+         id="btnInstructivos"
+         href="#"
+         target="_blank"
+         rel="noopener">
+
+        <svg width="18"
+             height="18"
+             viewBox="0 0 24 24"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg"
+             aria-hidden="true">
+
+          <path d="M6 3.5h9l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-16a1 1 0 0 1 1-1Z"
+                stroke="#fff"
+                stroke-width="1.7"
+                stroke-linejoin="round"/>
+
+          <path d="M14.5 3.5V7a1 1 0 0 0 1 1H19"
+                stroke="#fff"
+                stroke-width="1.7"
+                stroke-linejoin="round"/>
+
+          <path d="M8.3 12.2h7.4M8.3 15.3h7.4M8.3 18.4h4.6"
+                stroke="#fff"
+                stroke-width="1.7"
+                stroke-linecap="round"/>
         </svg>
+
         Instructivos
       </a>
+
     </div>
   </header>
 
+
   <section class="hero" id="inicio">
+
     <div class="wrap hero-grid">
+
       <div>
-        <p class="cite">Ley 675 de 2001 — Régimen de propiedad horizontal</p>
-        <h1>Radique su queja con debido proceso.</h1>
-        <p class="lead">Este portal recibe y radica la queja; no impone sanciones. En Reserva de Suba decide el Consejo de Administración (escritura 176 de 2016, arts. 97–98), siguiendo el Manual de convivencia 2020 y los topes de la Ley 675.</p>
+
+        <p class="cite">
+          Ley 675 de 2001 — Régimen de propiedad horizontal
+        </p>
+
+        <h1>
+          Radique su queja con debido proceso.
+        </h1>
+
+        <p class="lead">
+          Este portal recibe y radica la queja; no impone sanciones.
+          En Reserva de Suba decide el Consejo de Administración
+          (escritura 176 de 2016, arts. 97–98), siguiendo el Manual
+          de convivencia 2020 y los topes de la Ley 675.
+        </p>
+
         <div class="hero-actions">
-          <a class="btn btn-wine btn-lg" href="#tipos"><img class="btn-icon" src="icon-iniciar-queja.png" alt="" />Iniciar queja</a>
-          <a class="btn btn-whatsapp" id="btnWhatsapp" href="#" target="_blank" rel="noopener"><img class="btn-icon" src="icon-whatsapp.png" alt="" />Enviar pruebas/Citando radicado</a>
+
+          <a class="btn btn-wine btn-lg" href="#tipos">
+            <img class="btn-icon"
+                 src="icon-iniciar-queja.png"
+                 alt="" />
+            Iniciar queja
+          </a>
+
+          <a class="btn btn-whatsapp"
+             id="btnWhatsapp"
+             href="#"
+             target="_blank"
+             rel="noopener">
+
+            <img class="btn-icon"
+                 src="icon-whatsapp.png"
+                 alt="" />
+
+            Enviar pruebas/Citando radicado
+          </a>
+
         </div>
-        <p class="hero-foot">Tiempo estimado de radicación: 6 a 10 minutos. ¡IMPORTANTE! NO se acepta ningun tipo de prueba,sin el numero de radicado.</p>
+
+        <p class="hero-foot">
+          Tiempo estimado de radicación: 6 a 10 minutos.
+          ¡IMPORTANTE! NO se acepta ningun tipo de prueba,sin el numero de radicado.
+        </p>
+
       </div>
 
-      <aside class="expediente" aria-label="Datos de la copropiedad">
-        <div class="expediente-tab">Copropiedad</div>
-        <strong id="brandName" class="expediente-name">Reserva de Suba</strong>
+
+      <aside class="expediente"
+             aria-label="Datos de la copropiedad">
+
+        <div class="expediente-tab">
+          Copropiedad
+        </div>
+
+        <strong id="brandName"
+                class="expediente-name">
+          Reserva de Suba
+        </strong>
+
         <dl>
-          <div><dt>Administración</dt><dd id="infoAdmin">reservadesubaque@outlook.com</dd></div>
-          <div><dt>Teléfono</dt><dd id="infoTel">3194090958</dd></div>
-          <div><dt>Localidad</dt><dd id="infoCiudad">Localidad de Suba · Bogotá D.C.</dd></div>
+
+          <div>
+            <dt>Administración</dt>
+            <dd id="infoAdmin">
+              reservadesubaque@outlook.com
+            </dd>
+          </div>
+
+          <div>
+            <dt>Teléfono</dt>
+            <dd id="infoTel">
+              3194090958
+            </dd>
+          </div>
+
+          <div>
+            <dt>Localidad</dt>
+            <dd id="infoCiudad">
+              Localidad de Suba · Bogotá D.C.
+            </dd>
+          </div>
+
         </dl>
-        <p id="infoNombre" hidden>Reserva de Suba</p>
-        <p class="expediente-note">Cada radicación genera un número de expediente único (QJ-AAAAMMDD-####).Por favor anotelo o guardelo.</p>
+
+        <p id="infoNombre" hidden>
+          Reserva de Suba
+        </p>
+
+        <p class="expediente-note">
+          Cada radicación genera un número de expediente único
+          (QJ-AAAAMMDD-####).Por favor anotelo o guardelo.
+        </p>
+
       </aside>
+
     </div>
+
   </section>
+
 
   <section class="wrap section" id="proceso">
+
     <div class="section-head">
-      <p class="cite">Cómo funciona</p>
-      <h2>De la queja a una posible sanción</h2>
+
+      <p class="cite">
+        Cómo funciona
+      </p>
+
+      <h2>
+        De la queja a una posible sanción
+      </h2>
+
     </div>
+
+
     <ol class="timeline">
-      <li><span class="tl-n">01</span><div><h3>Usted radica</h3><p>Queja al correo de administración, con pruebas. Recibe un radicado QJ-…. Aún no hay sanción (Manual cap. XIX y art. 133).</p></div></li>
-      <li><span class="tl-n">02</span><div><h3>Llamado escrito</h3><p>El administrador verifica, deja constancia en la carpeta de la unidad y, si hay mérito, envía requerimiento escrito con la norma y plazo de 8 días calendario para descargos.</p></div></li>
-      <li><span class="tl-n">03</span><div><h3>Comité (art. 96 RPH)</h3><p>Puede mediar o concertar. El Comité <strong>no impone sanciones</strong> (RPH art. 96 §2 y Manual p. 13).</p></div></li>
-      <li><span class="tl-n">04</span><div><h3>Consejo decide</h3><p>El Consejo de Administración impone, si hay mérito, con motivación (RPH arts. 97–98). El administrador solo ejecuta (art. 100).</p></div></li>
-      <li><span class="tl-n">05</span><div><h3>Recursos</h3><p>Reposición ante el Consejo: 3 días hábiles (resuelve en 8). Impugnación judicial: 1 mes desde la comunicación (RPH art. 101).</p></div></li>
+
+      <li>
+        <span class="tl-n">01</span>
+
+        <div>
+          <h3>Usted radica</h3>
+
+          <p>
+            Queja al correo de administración, con pruebas.
+            Recibe un radicado QJ-…. Aún no hay sanción
+            (Manual cap. XIX y art. 133).
+          </p>
+        </div>
+      </li>
+
+
+      <li>
+        <span class="tl-n">02</span>
+
+        <div>
+          <h3>Llamado escrito</h3>
+
+          <p>
+            El administrador verifica, deja constancia en la carpeta
+            de la unidad y, si hay mérito, envía requerimiento escrito
+            con la norma y plazo de 8 días calendario para descargos.
+          </p>
+        </div>
+      </li>
+
+
+      <li>
+        <span class="tl-n">03</span>
+
+        <div>
+          <h3>Comité (art. 96 RPH)</h3>
+
+          <p>
+            Puede mediar o concertar. El Comité
+            <strong>no impone sanciones</strong>
+            (RPH art. 96 §2 y Manual p. 13).
+          </p>
+        </div>
+      </li>
+
+
+      <li>
+        <span class="tl-n">04</span>
+
+        <div>
+          <h3>Consejo decide</h3>
+
+          <p>
+            El Consejo de Administración impone, si hay mérito,
+            con motivación (RPH arts. 97–98).
+            El administrador solo ejecuta (art. 100).
+          </p>
+        </div>
+      </li>
+
+
+      <li>
+        <span class="tl-n">05</span>
+
+        <div>
+          <h3>Recursos</h3>
+
+          <p>
+            Reposición ante el Consejo: 3 días hábiles
+            (resuelve en 8). Impugnación judicial: 1 mes
+            desde la comunicación (RPH art. 101).
+          </p>
+        </div>
+      </li>
+
     </ol>
-    <p class="nota-proceso">Nota: las solicitudes de inspección en sitio serán programadas por la administración dentro de los 3 a 5 días hábiles siguientes a la revisión del formulario. Si se trata de una emergencia de convivencia en tiempo real (ruido actual, riñas, etc.), comuníquese de inmediato con la portería o con seguridad externa.</p>
+
+
+    <p class="nota-proceso">
+      Nota: las solicitudes de inspección en sitio serán programadas
+      por la administración dentro de los 3 a 5 días hábiles siguientes
+      a la revisión del formulario. Si se trata de una emergencia de
+      convivencia en tiempo real (ruido actual, riñas, etc.), comuníquese
+      de inmediato con la portería o con seguridad externa.
+    </p>
+
   </section>
+
 
   <section class="section kraft" id="tipos">
+
     <div class="wrap">
+
       <div class="section-head">
-        <p class="cite">Formatos disponibles</p>
-        <h2>Elija el tipo de queja</h2>
-        <p class="hint">Cada tipo carga un formato distinto con los campos que exige ese caso.</p>
+
+        <p class="cite">
+          Formatos disponibles
+        </p>
+
+        <h2>
+          Elija el tipo de queja
+        </h2>
+
+        <p class="hint">
+          Cada tipo carga un formato distinto con los campos que exige ese caso.
+        </p>
+
       </div>
+
       <div class="type-grid" id="typeGrid"></div>
+
     </div>
+
   </section>
+
 
   <section class="wrap section" id="formulario">
+
     <div class="section-head">
-      <p class="cite">Radicación</p>
-      <h2>Formulario de queja</h2>
-      <p class="hint" id="formHint">Seleccione un tipo arriba para cargar el formato.</p>
+
+      <p class="cite">
+        Radicación
+      </p>
+
+      <h2>
+        Formulario de queja
+      </h2>
+
+      <p class="hint" id="formHint">
+        Seleccione un tipo arriba para cargar el formato.
+      </p>
+
     </div>
 
-    <form id="quejaForm" class="form-card" novalidate>
-      <input type="hidden" name="tipo_queja" id="tipoQueja" />
-      <input type="hidden" name="tipo_label" id="tipoLabel" />
+
+    <form id="quejaForm"
+          class="form-card"
+          novalidate>
+
+      <input type="hidden"
+             name="tipo_queja"
+             id="tipoQueja" />
+
+      <input type="hidden"
+             name="tipo_label"
+             id="tipoLabel" />
+
 
       <fieldset>
-        <legend><span class="leg-n">I.</span> Quien presenta la queja</legend>
+
+        <legend>
+          <span class="leg-n">I.</span>
+          Quien presenta la queja
+        </legend>
+
         <div class="grid-2">
-          <label>Nombre completo *<input name="nombre" required /></label>
-          <label>Cédula *<input name="cedula" required inputmode="numeric" /></label>
-          <label>Calidad *
-            <select name="calidad" required>
-              <option value="">Seleccione</option>
-              <option>Propietario</option>
-              <option>Arrendatario</option>
-              <option>Residente autorizado</option>
-              <option>Personal de seguridad (No olvide también diligenciar minuta) / Administración</option>
-            </select>
+
+          <label>
+            Nombre completo *
+            <input name="nombre" required />
           </label>
-          <label>Unidad *<input name="unidad" required placeholder="Torre — Apto" /></label>
-          <label>Teléfono *<input name="telefono" required inputmode="tel" /></label>
-          <label>Correo *<input name="email" type="email" required /></label>
+
+          <label>
+            Cédula *
+            <input name="cedula"
+                   required
+                   inputmode="numeric" />
+          </label>
+
+          <label>
+            Calidad *
+
+            <select name="calidad" required>
+
+              <option value="">
+                Seleccione
+              </option>
+
+              <option>
+                Propietario
+              </option>
+
+              <option>
+                Arrendatario
+              </option>
+
+              <option>
+                Residente autorizado
+              </option>
+
+              <option>
+                Personal de seguridad (No olvide también diligenciar minuta) / Administración
+              </option>
+
+            </select>
+
+          </label>
+
+          <label>
+            Unidad *
+            <input name="unidad"
+                   required
+                   placeholder="Torre — Apto" />
+          </label>
+
+          <label>
+            Teléfono *
+            <input name="telefono"
+                   required
+                   inputmode="tel" />
+          </label>
+
+          <label>
+            Correo *
+            <input name="email"
+                   type="email"
+                   required />
+          </label>
+
         </div>
-        <label class="check"><input type="checkbox" name="reserva_identidad" /> Solicito que la administración reserve mi identidad frente al vecino reportado. Entiendo que si aporto pruebas físicas (fotos, videos o minuta), el proceso se sustentará en ellas protegiendo mi anonimato. Mi nombre solo se revelaría si YO autorizo y en caso extremo de que no existan pruebas materiales y mi testimonio directo sea la única vía legal para sostener una sanción (Art. 29 Constitución Política).</label>
+
+
+        <label class="check">
+
+          <input type="checkbox"
+                 name="reserva_identidad" />
+
+          Solicito que la administración reserve mi identidad frente
+          al vecino reportado. Entiendo que si aporto pruebas físicas
+          (fotos, videos o minuta), el proceso se sustentará en ellas
+          protegiendo mi anonimato. Mi nombre solo se revelaría si YO
+          autorizo y en caso extremo de que no existan pruebas materiales
+          y mi testimonio directo sea la única vía legal para sostener
+          una sanción (Art. 29 Constitución Política).
+
+        </label>
+
       </fieldset>
 
+
       <fieldset>
-        <legend><span class="leg-n">II.</span> Presunto infractor y hechos</legend>
+
+        <legend>
+          <span class="leg-n">II.</span>
+          Presunto infractor y hechos
+        </legend>
+
         <div class="grid-2">
-          <label>Unidad del presunto infractor *<input name="unidad_infractor" required /></label>
-          <label>Nombre (si lo conoce)<input name="nombre_infractor" /></label>
-          <label>Fecha de los hechos *<input name="fecha_hechos" type="date" required /></label>
-          <label>Hora aproximada<input name="hora_hechos" type="time" /></label>
+
+          <label>
+            Unidad del presunto infractor *
+            <input name="unidad_infractor"
+                   required />
+          </label>
+
+          <label>
+            Nombre (si lo conoce)
+            <input name="nombre_infractor" />
+          </label>
+
+          <label>
+            Fecha de los hechos *
+            <input name="fecha_hechos"
+                   type="date"
+                   required />
+          </label>
+
+          <label>
+            Hora aproximada
+            <input name="hora_hechos"
+                   type="time" />
+          </label>
+
         </div>
-        <label>¿Es un hecho reiterado?
+
+
+        <label>
+          ¿Es un hecho reiterado?
+
           <select name="reiterado">
-            <option value="No / primera vez">No / primera vez</option>
-            <option value="Sí, ya ocurrió antes">Sí, ya ocurrió antes</option>
-            <option value="Es continuo o permanente">Es continuo o permanente</option>
+
+            <option value="No / primera vez">
+              No / primera vez
+            </option>
+
+            <option value="Sí, ya ocurrió antes">
+              Sí, ya ocurrió antes
+            </option>
+
+            <option value="Es continuo o permanente">
+              Es continuo o permanente
+            </option>
+
           </select>
+
         </label>
+
       </fieldset>
+
 
       <fieldset id="camposEspecificos">
-        <legend><span class="leg-n">III.</span> Formato específico</legend>
-        <p class="muted">Seleccione un tipo de queja para ver estos campos.</p>
+
+        <legend>
+          <span class="leg-n">III.</span>
+          Formato específico
+        </legend>
+
+        <p class="muted">
+          Seleccione un tipo de queja para ver estos campos.
+        </p>
+
       </fieldset>
 
+
       <fieldset>
-        <legend><span class="leg-n">IV.</span> Relato, pretensión y pruebas</legend>
-        <label>Relato de los hechos *<textarea name="hechos" required rows="6"></textarea></label>
-        <label>Qué solicita *
+
+        <legend>
+          <span class="leg-n">IV.</span>
+          Relato, pretensión y pruebas
+        </legend>
+
+
+        <label>
+          Relato de los hechos *
+
+          <textarea name="hechos"
+                    required
+                    rows="6"></textarea>
+        </label>
+
+
+        <label>
+          Qué solicita *
+
           <select name="pretension" required>
-            <option value="">Seleccione</option>
-            <option value="Poner en conocimiento de la administración">Poner en conocimiento de la administración</option>
-            <option value="Llamado de atención / requerimiento escrito">Llamado de atención / requerimiento escrito</option>
-            <option value="Remisión al Comité de Convivencia (art. 58 Ley 675)">Remisión al Comité de Convivencia (art. 58 Ley 675)</option>
-            <option value="Inicio de proceso sancionatorio (arts. 59 y 60 Ley 675)">Inicio de proceso sancionatorio (arts. 59 y 60 Ley 675)</option>
-            <option value="Inspección / verificación en sitio">Inspección / verificación en sitio</option>
-            <option value="Reparación de daños a cargo de quien resulte responsable">Reparación de daños a cargo de quien resulte responsable</option>
+
+            <option value="">
+              Seleccione
+            </option>
+
+            <option value="Poner en conocimiento de la administración">
+              Poner en conocimiento de la administración
+            </option>
+
+            <option value="Llamado de atención / requerimiento escrito">
+              Llamado de atención / requerimiento escrito
+            </option>
+
+            <option value="Remisión al Comité de Convivencia (art. 58 Ley 675)">
+              Remisión al Comité de Convivencia (art. 58 Ley 675)
+            </option>
+
+            <option value="Inicio de proceso sancionatorio (arts. 59 y 60 Ley 675)">
+              Inicio de proceso sancionatorio (arts. 59 y 60 Ley 675)
+            </option>
+
+            <option value="Inspección / verificación en sitio">
+              Inspección / verificación en sitio
+            </option>
+
+            <option value="Reparación de daños a cargo de quien resulte responsable">
+              Reparación de daños a cargo de quien resulte responsable
+            </option>
+
           </select>
+
         </label>
-        <label>Pruebas que aporta<textarea name="pruebas" rows="3"></textarea></label>
-        <label>Cómo entrega las pruebas *
+
+
+        <label>
+          Pruebas que aporta
+
+          <textarea name="pruebas"
+                    rows="3"></textarea>
+        </label>
+
+
+        <label>
+          Cómo entrega las pruebas *
+
           <select name="medio_prueba" required>
-            <option value="">Seleccione</option>
-            <option value="Enlace de Google Drive / OneDrive">Enlace de Drive o OneDrive (foto,video)</option>
-            <option value="Fotos livianas enviadas al correo, citando el radicado">Fotos livianas enviadas al correo, citando el radicado</option>
-            <option value="WhatsApp a administración citando el radicado">WhatsApp citando el radicado</option>
-            <option value="Solo descripción / minuta de portería">Solo descripción o minuta</option>
+
+            <option value="">
+              Seleccione
+            </option>
+
+            <option value="Enlace de Google Drive / OneDrive">
+              Enlace de Drive o OneDrive (foto,video)
+            </option>
+
+            <option value="Fotos livianas enviadas al correo, citando el radicado">
+              Fotos livianas enviadas al correo, citando el radicado
+            </option>
+
+            <option value="WhatsApp a administración citando el radicado">
+              WhatsApp citando el radicado
+            </option>
+
+            <option value="Solo descripción / minuta de portería">
+              Solo descripción o minuta
+            </option>
+
           </select>
+
         </label>
-        <label>Enlace de Drive / OneDrive<input name="enlace_pruebas" type="url" placeholder="https://drive.google.com/..." /></label>
-        <label>Testigos<textarea name="testigos" rows="2"></textarea></label>
+
+
+        <label>
+          Enlace de Drive / OneDrive
+
+          <input name="enlace_pruebas"
+                 type="url"
+                 placeholder="https://drive.google.com/..." />
+        </label>
+
+
+        <label>
+          Testigos
+
+          <textarea name="testigos"
+                    rows="2"></textarea>
+        </label>
+
       </fieldset>
 
+
       <fieldset>
-        <legend><span class="leg-n">V.</span> Declaración</legend>
-        <label class="check"><input type="checkbox" name="veracidad" required /> Declaro que la información es veraz y de buena fe. Sé que las sanciones no son automáticas, que solo proceden por conductas previstas en la ley o en el reglamento, y que el presunto infractor tiene derecho de defensa, contradicción e impugnación.</label>
-        <label class="check"><input type="checkbox" name="habeas" required /> Autorizo a la copropiedad Reserva de Suba a tratar mis datos personales únicamente para radicar, notificar y tramitar esta queja, conforme a la Ley 1581 de 2012. Puedo conocer, actualizar y rectificar mis datos ante la administración.</label>
-        <label class="check"><input type="checkbox" name="no_temeraria" required /> Entiendo que una queja temeraria o de mala fe puede generar responsabilidad y no reemplaza la denuncia penal ni el 123 ante una emergencia.</label>
+
+        <legend>
+          <span class="leg-n">V.</span>
+          Declaración
+        </legend>
+
+
+        <label class="check">
+
+          <input type="checkbox"
+                 name="veracidad"
+                 required />
+
+          Declaro que la información es veraz y de buena fe.
+          Sé que las sanciones no son automáticas, que solo proceden
+          por conductas previstas en la ley o en el reglamento, y que
+          el presunto infractor tiene derecho de defensa, contradicción
+          e impugnación.
+
+        </label>
+
+
+        <label class="check">
+
+          <input type="checkbox"
+                 name="habeas"
+                 required />
+
+          Autorizo a la copropiedad Reserva de Suba a tratar mis datos
+          personales únicamente para radicar, notificar y tramitar esta
+          queja, conforme a la Ley 1581 de 2012. Puedo conocer, actualizar
+          y rectificar mis datos ante la administración.
+
+        </label>
+
+
+        <label class="check">
+
+          <input type="checkbox"
+                 name="no_temeraria"
+                 required />
+
+          Entiendo que una queja temeraria o de mala fe puede generar
+          responsabilidad y no reemplaza la denuncia penal ni el 123
+          ante una emergencia.
+
+        </label>
+
       </fieldset>
+
 
       <div class="form-actions">
-        <button type="submit" class="btn btn-wine btn-lg" id="submitBtn">Radicar y generar formato</button>
-        <button type="button" class="btn btn-outline" id="previewBtn">Vista previa</button>
-        <button type="reset" class="btn btn-text">Limpiar</button>
+
+        <button type="submit"
+                class="btn btn-wine btn-lg"
+                id="submitBtn">
+          Radicar y generar formato
+        </button>
+
+        <button type="button"
+                class="btn btn-outline"
+                id="previewBtn">
+          Vista previa
+        </button>
+
+        <button type="reset"
+                class="btn btn-text">
+          Limpiar
+        </button>
+
       </div>
-      <p class="fine" id="envioNota"></p>
+
+      <p class="fine"
+         id="envioNota"></p>
+
     </form>
+
   </section>
+
 
   <section class="section kraft" id="marco">
+
     <div class="wrap">
+
       <div class="section-head">
-        <p class="cite">Marco legal · Bogotá</p>
-        <h2>Qué sí puede — y qué no puede — la copropiedad</h2>
+
+        <p class="cite">
+          Marco legal · Bogotá
+        </p>
+
+        <h2>
+          Qué sí puede — y qué no puede — la copropiedad
+        </h2>
+
       </div>
+
+
       <div class="legal-grid">
+
         <article class="card">
-          <p class="tag">RPH art. 96 · Ley 675 art. 58</p>
-          <h3>El Comité de Convivencia</h3>
-          <p>Comité de Convivencia (3 o más, impar, elegido por Asamblea). Recibe conflictos, concilia y puede archivar. <strong>En ningún caso impone sanciones</strong> (escritura 176 de 2016, art. 96 §2; Manual p. 13).</p>
+
+          <p class="tag">
+            RPH art. 96 · Ley 675 art. 58
+          </p>
+
+          <h3>
+            El Comité de Convivencia
+          </h3>
+
+          <p>
+            Comité de Convivencia (3 o más, impar, elegido por Asamblea).
+            Recibe conflictos, concilia y puede archivar.
+            <strong>En ningún caso impone sanciones</strong>
+            (escritura 176 de 2016, art. 96 §2; Manual p. 13).
+          </p>
+
         </article>
+
+
         <article class="card">
-          <p class="tag">RPH art. 97 = Ley 675 art. 59</p>
-          <h3>Qué sanciones existen</h3>
-          <p>Tras requerimiento escrito: 1) publicar lista de infractores (máx. 1 mes); 2) multas sucesivas (cada una hasta 2 cuotas; sumadas, 10); 3) restringir zonas comunes no esenciales hasta 1 mes en conductas tipo B. <strong>Prohibido</strong> cortar acceso, bienes esenciales o de uso exclusivo.</p>
+
+          <p class="tag">
+            RPH art. 97 = Ley 675 art. 59
+          </p>
+
+          <h3>
+            Qué sanciones existen
+          </h3>
+
+          <p>
+            Tras requerimiento escrito: 1) publicar lista de infractores
+            (máx. 1 mes); 2) multas sucesivas (cada una hasta 2 cuotas;
+            sumadas, 10); 3) restringir zonas comunes no esenciales hasta
+            1 mes en conductas tipo B.
+            <strong>Prohibido</strong> cortar acceso, bienes esenciales
+            o de uso exclusivo.
+          </p>
+
         </article>
+
+
         <article class="card">
-          <p class="tag">RPH arts. 98 y 100</p>
-          <h3>Quién decide</h3>
-          <p>En Reserva de Suba el <strong>Consejo de Administración</strong> impone la sanción (art. 98). El administrador la <strong>hace efectiva</strong>, no la crea (art. 100). Si el interesado lo pide, debe ser oído antes (art. 99).</p>
+
+          <p class="tag">
+            RPH arts. 98 y 100
+          </p>
+
+          <h3>
+            Quién decide
+          </h3>
+
+          <p>
+            En Reserva de Suba el
+            <strong>Consejo de Administración</strong>
+            impone la sanción (art. 98).
+            El administrador la <strong>hace efectiva</strong>,
+            no la crea (art. 100).
+            Si el interesado lo pide, debe ser oído antes (art. 99).
+          </p>
+
         </article>
+
+
         <article class="card">
-          <p class="tag">Manual de convivencia 2020</p>
-          <h3>Tipicidad</h3>
-          <p>Solo se tramitan conductas previstas en el reglamento de propiedad horizontal (escritura 176 de 2016, art. 99) o en el Manual de Convivencia 2020, capítulo XIX. Las sanciones, si hay mérito, las impone el Consejo de Administración y deben respetar los topes de la Ley 675 de 2001.</p>
+
+          <p class="tag">
+            Manual de convivencia 2020
+          </p>
+
+          <h3>
+            Tipicidad
+          </h3>
+
+          <p>
+            Solo se tramitan conductas previstas en el reglamento de
+            propiedad horizontal (escritura 176 de 2016, art. 99) o en
+            el Manual de Convivencia 2020, capítulo XIX.
+            Las sanciones, si hay mérito, las impone el Consejo de
+            Administración y deben respetar los topes de la Ley 675 de 2001.
+          </p>
+
         </article>
+
+
         <article class="card">
-          <h3>Otras autoridades en Bogotá</h3>
-          <p class="tag">Ley 1801 · Alcaldía de Suba</p>
-          <p>Código Nacional de Seguridad y Convivencia (Ley 1801): Inspección de Policía. Alcaldía Local de Suba. Emergencia o violencia en curso: <strong>123</strong>. Este formulario no sustituye denuncia penal ni medida de protección.</p>
+
+          <h3>
+            Otras autoridades en Bogotá
+          </h3>
+
+          <p class="tag">
+            Ley 1801 · Alcaldía de Suba
+          </p>
+
+          <p>
+            Código Nacional de Seguridad y Convivencia (Ley 1801):
+            Inspección de Policía. Alcaldía Local de Suba.
+            Emergencia o violencia en curso:
+            <strong>123</strong>.
+            Este formulario no sustituye denuncia penal ni medida de protección.
+          </p>
+
         </article>
+
+
         <article class="card">
-          <p class="tag">Ley 1581 de 2012</p>
-          <h3>Datos personales</h3>
-          <p>Los datos se usan solo para este trámite. La reserva de identidad ante el presunto infractor no es absoluta si se abre un proceso con derecho de contradicción.</p>
+
+          <p class="tag">
+            Ley 1581 de 2012
+          </p>
+
+          <h3>
+            Datos personales
+          </h3>
+
+          <p>
+            Los datos se usan solo para este trámite.
+            La reserva de identidad ante el presunto infractor
+            no es absoluta si se abre un proceso con derecho
+            de contradicción.
+          </p>
+
         </article>
+
       </div>
+
     </div>
+
   </section>
 
+
   <footer class="foot">
+
     <div class="wrap foot-inner">
+
       <img src="logo.png" alt="" />
+
       <div>
-        <p><strong id="footerName">Reserva de Suba</strong> · parque residencial</p>
-        <p class="mini">Portal interno de radicación. Se rige por la Ley 675 de 2001, la escritura 176 del 21 de junio de 2016 (Notaría 32) y el Manual de Convivencia 2020. No es asesoría jurídica. Carrera 145 #150-64 · Suba.</p>
-        <p class="mini copy">Reserva de Suba © 2026 — Todos los derechos reservados.</p>
+
+        <p>
+          <strong id="footerName">
+            Reserva de Suba
+          </strong>
+          · parque residencial
+        </p>
+
+        <p class="mini">
+          Portal interno de radicación. Se rige por la Ley 675 de 2001,
+          la escritura 176 del 21 de junio de 2016 (Notaría 32) y el
+          Manual de Convivencia 2020. No es asesoría jurídica.
+          Carrera 145 #150-64 · Suba.
+        </p>
+
+        <p class="mini copy">
+          Reserva de Suba © 2026 — Todos los derechos reservados.
+        </p>
+
       </div>
+
     </div>
+
   </footer>
 
-  <div class="modal" id="modal" hidden>
-    <div class="modal-backdrop" data-close></div>
+
+  <!-- VENTANA DEL FORMATO DE QUEJA -->
+
+  <div class="modal"
+       id="modal"
+       hidden>
+
+    <div class="modal-backdrop"
+         data-close></div>
+
     <div class="modal-panel">
-      <button class="modal-close" data-close aria-label="Cerrar">×</button>
-      <h2 id="modalTitle">Formato de queja</h2>
-      <p class="aviso-envio" id="avisoEnvio" hidden></p>
+
+      <button class="modal-close"
+              data-close
+              aria-label="Cerrar">
+        ×
+      </button>
+
+
+      <h2 id="modalTitle">
+        Formato de queja
+      </h2>
+
+
+      <p class="aviso-envio"
+         id="avisoEnvio"
+         hidden></p>
+
+
+      <!-- BOTONES DEL FORMATO -->
+
       <div class="doc-toolbar">
-        <button class="btn btn-wine btn-sm" id="printBtn">Imprimir / PDF — Guardar</button>
-        <button class="btn btn-outline btn-sm" id="copyBtn">Copiar texto</button>
+
+        <button class="btn btn-wine btn-sm"
+                id="printBtn">
+          Imprimir / PDF — Guardar
+        </button>
+
+
+        <button class="btn btn-outline btn-sm"
+                id="copyBtn">
+          Copiar texto
+        </button>
+
+
+        <!-- NUEVO BOTÓN DE WHATSAPP -->
+
+        <a class="btn btn-whatsapp btn-sm"
+           id="btnWhatsappModal"
+           href="#"
+           target="_blank"
+           rel="noopener">
+
+          <img class="btn-icon"
+               src="icon-whatsapp.png"
+               alt="" />
+
+          Enviar pruebas por WhatsApp
+
+        </a>
+
       </div>
-      <article class="documento" id="documento"></article>
+
+
+      <article class="documento"
+               id="documento"></article>
+
     </div>
+
   </div>
+
 
   <script src="config.js"></script>
   <script src="app.js"></script>
+
 </body>
 </html>
-
