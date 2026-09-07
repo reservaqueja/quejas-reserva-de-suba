@@ -8,9 +8,9 @@ window.CONJUNTO_CONFIG = {
   telefonoAdmin: "3194090958",
   horarioAtencion: "Lunes a viernes, 8:00 a.m. a 5:00 p.m.",
 
-  instructivosUrl: "https://drive.google.com/file/d/1CaF214o654Dcz0FkSd2EUQer54GnZJiO/view?usp=drive_link",
+  instructivosUrl: "https://drive.google.com/file/d/1tuBHxIfVugzW-orrdQpM_-2wdi01zAO3/view?usp=sharing",
   whatsappPruebas: "573174683541",
-  whatsappMensaje: "Hola, administración Reserva de Suba. Envío pruebas de mi queja. Radicado:-----------Adjunto el registro visual como prueba de la infracción. Les recuerdo que este material contiene datos sensibles (rostros), por lo cual su uso es de carácter estrictamente reservado y confidencial para el proceso interno, de acuerdo con la Ley 1581 de 2012.",
+  whatsappMensaje: "Hola, administración Reserva de Suba. Envío pruebas de mi queja. Radicado:-----------Adjunto el registro visual como prueba de la infracción. Les recuerdo que este material puede contener datos sensibles (rostros), por lo cual su uso es de carácter estrictamente reservado y confidencial para el proceso interno, de acuerdo con la Ley 1581 de 2012.",
 
   web3formsAccessKey: "f56f70d8-4530-453b-a46d-7955102a5f0d",
   envioAutomatico: true,
