@@ -157,7 +157,7 @@
     }
 
     if (els.envioNota) {
-      els.envioNota.textContent = "Nota: Al radicar, el formato se enviará al correo de la administración. SOLO si el cupo mensual automático se acaba, use Enviar por correo: el formulario que se envía es el mismo.";
+      els.envioNota.textContent = "Nota: Al radicar, el formato se enviará al correo de la administración.";
     }
   }
 
