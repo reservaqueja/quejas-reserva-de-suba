@@ -247,7 +247,7 @@
       <h1>FORMATO DE QUEJA ANTE LA COPROPIEDAD</h1>
       <p class="sub">${escapeHtml(cfg.nombre || "Conjunto Residencial")}<br>
       ${escapeHtml(cfg.direccion || "")} · ${escapeHtml(cfg.ciudad || "")}<br>
-      NIT ${escapeHtml(cfg.nit || "—")} · Radicado <strong>${num}</strong></p>
+      Radicado <strong>${num}</strong></p>
       <p>Señores<br><strong>Administración / Consejo de Administración</strong><br>
       ${escapeHtml(cfg.nombre || "")}<br>
       ${escapeHtml(cfg.ciudad || "")}, ${ahora}</p>
@@ -312,7 +312,6 @@
       "FORMATO DE QUEJA ANTE LA COPROPIEDAD",
       cfg.nombre || "Reserva de Suba",
       (cfg.direccion || "") + " · " + (cfg.ciudad || ""),
-      "NIT " + (cfg.nit || "—"),
       "",
       "Radicado: " + num,
       "Fecha de radicación: " + ahora,
