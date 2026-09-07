@@ -26,6 +26,18 @@
       ]
     },
     {
+      id: "balcones",
+      icon: "🧺",
+      titulo: "Balcones, ventanas y fachada",
+      desc: "Objetos amontonados, ropa tendida, elementos colgados o uso indebido visible desde zonas comunes.",
+      campos: [
+        { name: "tipo_balcon", label: "Tipo de infracción", type: "select", required: true, options: ["Ropa o ropa tendida visible", "Objetos amontonados o almacenados", "Elementos colgados (cuerdas, hamacas, toldos no autorizados)", "Basura, escombros o materiales", "Antenas, avisos o elementos no autorizados", "Plantas o materas que gotean o generan riesgo", "Otro"] },
+        { name: "lugar_balcon", label: "Ubicación del balcón o ventana", type: "text", required: true, placeholder: "Torre, piso, lado que da a la zona común o a la calle" },
+        { name: "visible_desde", label: "¿Es visible desde zona común o vía pública?", type: "select", options: ["Sí, zona común", "Sí, vía pública", "Sí, ambos", "No / no estoy seguro"] },
+        { name: "riesgo_balcon", label: "¿Hay riesgo de caída de objetos?", type: "select", options: ["No", "Posible", "Sí, riesgo evidente"] }
+      ]
+    },
+    {
       id: "parqueadero",
       icon: "🚗",
       titulo: "Parqueadero y movilidad",
