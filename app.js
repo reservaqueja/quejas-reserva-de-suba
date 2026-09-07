@@ -75,9 +75,9 @@
       id: "obras",
       icon: "🔨",
       titulo: "Obras y modificaciones",
-      desc: "Remodelaciones sin permiso, fachada, techos, antenas o toldos.",
+      desc: "Remodelaciones sin permiso, fachada, techos, antenas.",
       campos: [
-        { name: "tipo_obra", label: "Tipo de intervención", type: "select", required: true, options: ["Remodelación interior con ruido o escombros", "Cambio de fachada / ventanas / color", "Toldos, rejas, antenas, aires", "Cerramiento de balcón o terraza", "Obra en zona común", "Horario de obra no autorizado", "Otro"] },
+        { name: "tipo_obra", label: "Tipo de intervención", type: "select", required: true, options: ["Remodelación interior con ruido o escombros", "Cambio de fachada / ventanas / color", "rejas, antenas, aires", "Cerramiento de balcón", "Obra en zona común", "Horario de obra no autorizado", "Otro"] },
         { name: "permiso_obra", label: "¿Consta permiso de administración o asamblea?", type: "select", options: ["No", "Sí", "Desconozco"] },
         { name: "afecta_estructura", label: "¿Afecta estructura, impermeabilización o redes?", type: "select", options: ["No sé", "Sí", "No"] }
       ]
