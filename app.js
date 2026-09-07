@@ -33,7 +33,7 @@
       campos: [
         { name: "tipo_balcon", label: "Tipo de infracción", type: "select", required: true, options: ["Ropa o ropa tendida visible", "Objetos amontonados o almacenados", "Elementos colgados (cuerdas, hamacas, toldos no autorizados)", "Basura, escombros o materiales", "Antenas, avisos o elementos no autorizados", "Plantas o materas que gotean o generan riesgo", "Otro"] },
         { name: "lugar_balcon", label: "Ubicación del balcón o ventana", type: "text", required: true, placeholder: "Torre, piso, lado que da a la zona común o a la calle" },
-        { name: "visible_desde", label: "¿Es visible desde zona común o vía pública?", type: "select", options: ["Sí, zona común", "Sí, vía pública", "Sí, ambos", "No / no estoy seguro"] },
+        { name: "visible_desde", label: "¿Es visible desde zona común o vía pública?", type: "select", options: ["Sí, zona común", "Sí, vía pública", "Sí, ambos"] },
         { name: "riesgo_balcon", label: "¿Hay riesgo de caída de objetos?", type: "select", options: ["No", "Posible", "Sí, riesgo evidente"] }
       ]
     },
@@ -77,7 +77,7 @@
       titulo: "Obras y modificaciones",
       desc: "Remodelaciones sin permiso, fachada, techos, antenas.",
       campos: [
-        { name: "tipo_obra", label: "Tipo de intervención", type: "select", required: true, options: ["Remodelación interior con ruido o escombros", "Cambio de fachada / ventanas / color", "rejas, antenas, aires", "Cerramiento de balcón", "Obra en zona común", "Horario de obra no autorizado", "Otro"] },
+        { name: "tipo_obra", label: "Tipo de intervención", type: "select", required: true, options: ["Remodelación interior con ruido o escombros", "Cambio de fachada / ventanas / color", "Rejas, antenas, aires", "Cerramiento de balcón", "Obra en zona común", "Horario de obra no autorizado", "Otro"] },
         { name: "permiso_obra", label: "¿Consta permiso de administración o asamblea?", type: "select", options: ["No", "Sí", "Desconozco"] },
         { name: "afecta_estructura", label: "¿Afecta estructura, impermeabilización o redes?", type: "select", options: ["No sé", "Sí", "No"] }
       ]
