@@ -3,7 +3,6 @@ window.CONJUNTO_CONFIG = {
   nombre: "Reserva de Suba",
   ciudad: "Localidad de Suba · Bogotá D.C.",
   direccion: "Carrera 145 #150-64 · Localidad de Suba",
-  nit: "POR CONFIRMAR",
   emailAdmin: "reservadesubaque@outlook.com",
   telefonoAdmin: "3194090958",
   horarioAtencion: "Lunes a viernes, 8:00 a.m. a 5:00 p.m.",
